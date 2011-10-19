@@ -58,7 +58,7 @@
         <% @noticias.each do |noticia| %>
           <li>
             <h3><%= truncate(noticia.title, :length => 20) %> </h3>
-            <h4><%= noticia.created_at %></h4>
+            <h4><%= noticia.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
             <% link_to update_path(noticia) do %>
               <p class="clear"><%= truncate(sanitize(noticia.text, :tags => ""), :length => 85) %></p>
             <% end %>

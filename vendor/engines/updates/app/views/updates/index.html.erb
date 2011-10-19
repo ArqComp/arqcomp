@@ -6,7 +6,7 @@
       <li>
         <div class="call">
           <h3><%= update.title %> </h3>
-          <h4><%= update.created_at %></h4>
+          <h4><%= update.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
         </div>
         <p class="clear"><%= truncate(sanitize(update.text, :tags=>""), :length => 190) %> </p>
         
