@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <%= render :partial => "/shared/html_tag" %>
-  <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
-  <%= render :partial => "/shared/head" %>
-  <body>
-    <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
-       <div id="header"> <!--Header-->
-          <span id="logo"><h1>Arquiteturas de Computadores</h1></span>
-        
-
-          <ul id="nav">
-              <li><a class="current" href="index.html" title="Página Inicial">Home</a></li>
-              <li><a href="noticias.html" title="Notícias">Notícias</a></li>
-                                  <li><a href="disciplina.html" title="Disciplina">Disciplina</a></li>
-              <li><a href="conteudo.html" title="Conteúdo">Conteúdo</a></li>
-              <li><a href="trabalho.html" title="Trabalhos">Trabalhos</a></li>
-              <li class="last-child"><a href="monitoria.html" title="Monitoria">Monitoria</a></li>
-          </ul>
-      </div>  <!--End Header-->
-
-      <div id="main" class="clear">  <!--Main-->
-        <%= yield %>
-      </div> <!--End Main-->
-      <div class="clear"></div>
-      <div id="footer" class="clear"> <!--Footer-->
-          <p>2011 &copy; AC | <span>All rights reserved.</span></p>
-
-          <div id="links">
-              <ul id="nav-footer">
-                  <li><a class="current" href="index.html" title="Página Inicial">Home <span>-</span></a></li>
-                  <li><a href="noticias.html" title="Notícias">Notícias <span>-</span></a></li>
-                                          <li><a href="disciplina.html" title="Disciplina">Disciplina <span>-</span></a></li>
-                  <li><a href="conteudo.html" title="Conteúdo">Conteúdo <span>-</span></a></li>
-                  <li><a href="trabalho.html" title="Trabalhos">Trabalhos <span>-</span></a></li>
-                  <li><a href="monitoria.html" title="Monitoria">Monitoria</a></li>
-              </ul>
-
-              <ul id="help-footer" class="clear">
-                  <li><a href="login.html" title="Login">Login <span>&bull;</span></a></li>
-                  <li><a href="cadastro.html" title="Cadrasto">Cadrasto <span>&bull;</span></a></li>
-                  <li><a href="ajuda.html" title="Ajuda">Sobre</a></li>
-              </ul>
-          </div>
-      </div>  <!--End Footer-->       
-      <div class="clear"></div>
+<% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
+<%= render :partial => "/shared/head" %>
+<body>
+  <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+  <div id="page_container">
+    <div id="header"> <!--Header-->
+      <span id="logo"><h1>Arquiteturas de Computadores</h1></span>
 
 
-      <%#= site_bar -%>
-      <%#*<header>%>
-        <%#= render :partial => "/shared/header" -%>
-      <%#*</header>%>
-      <%#*<section id='page'>%>
-        <%#= yield %>
-      <%#*</section>%>
-        
-      <%#*<footer>%>
-        <%#= render :partial => "/shared/footer" -%>
-      <%#*</footer>%>
-    </div>
-    <%= render :partial => "/shared/javascripts" %>
-  </body>
+      <ul id="nav">
+        <li><a class="current" href="index.html" title="Página Inicial">Home</a></li>
+        <li><a href="noticias.html" title="Notícias">Notícias</a></li>
+        <li><a href="disciplina.html" title="Disciplina">Disciplina</a></li>
+        <li><a href="conteudo.html" title="Conteúdo">Conteúdo</a></li>
+        <li><a href="trabalho.html" title="Trabalhos">Trabalhos</a></li>
+        <li class="last-child"><a href="monitoria.html" title="Monitoria">Monitoria</a></li>
+      </ul>
+    </div>  <!--End Header-->
+
+
+    <%= yield %>
+
+    <div class="clear"></div>
+    <div id="footer" class="clear"> <!--Footer-->
+      <p>2011 &copy; AC | <span>All rights reserved.</span></p>
+
+      <div id="links">
+        <ul id="nav-footer">
+          <li><a class="current" href="index.html" title="Página Inicial">Home <span>-</span></a></li>
+          <li><a href="noticias.html" title="Notícias">Notícias <span>-</span></a></li>
+          <li><a href="disciplina.html" title="Disciplina">Disciplina <span>-</span></a></li>
+          <li><a href="conteudo.html" title="Conteúdo">Conteúdo <span>-</span></a></li>
+          <li><a href="trabalho.html" title="Trabalhos">Trabalhos <span>-</span></a></li>
+          <li><a href="monitoria.html" title="Monitoria">Monitoria</a></li>
+        </ul>
+
+        <ul id="help-footer" class="clear">
+          <li><a href="login.html" title="Login">Login <span>&bull;</span></a></li>
+          <li><a href="cadastro.html" title="Cadrasto">Cadrasto <span>&bull;</span></a></li>
+          <li><a href="ajuda.html" title="Ajuda">Sobre</a></li>
+        </ul>
+      </div>
+    </div>  <!--End Footer-->       
+    <div class="clear"></div>
+
+
+<%#= site_bar -%>
+<%#*<header>%>
+<%#= render :partial => "/shared/header" -%>
+<%#*</header>%>
+<%#*<section id='page'>%>
+<%#= yield %>
+<%#*</section>%>
+
+<%#*<footer>%>
+<%#= render :partial => "/shared/footer" -%>
+<%#*</footer>%>
+  </div>
+  <%= render :partial => "/shared/javascripts" %>
+</body>
 </html>

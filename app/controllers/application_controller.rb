@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   before_filter :ler_noticias
   
   def ler_noticias
-    @noticias = Update.all
+    @noticias = Update.order('created_at DESC').limit 3
   end
 end

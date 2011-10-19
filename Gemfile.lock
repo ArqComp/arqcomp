@@ -184,3 +184,4 @@ DEPENDENCIES
   refinerycms-updates (= 1.0)!
   ruby-debug19
   sqlite3
+  will_paginate

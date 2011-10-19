@@ -20,7 +20,7 @@ class UpdatesController < ApplicationController
 protected
 
   def find_all_updates
-    @updates = Update.order('position ASC')
+    @updates = Update.order('created_at DESC').paginate :page => params[:page], :per_page => 6
   end
 
   def find_page

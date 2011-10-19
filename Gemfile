@@ -63,4 +63,5 @@ gem 'refinerycms-projects', '1.0', :path => 'vendor/engines'
 gem 'refinerycms-updates', '1.0', :path => 'vendor/engines'
 gem 'event-calendar', :require => 'event_calendar'
 gem 'ruby-debug19'
+gem 'will_paginate'
 #gem "tablebuilder", :git => "https://github.com/mbreit/tablebuilder"
