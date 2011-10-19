@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    updates:
+      title: Updates
+  admin:
+    updates:
+      actions:
+        create_new: Maak een nieuwe Update
+        reorder: Wijzig de volgorde van de Updates
+        reorder_done: Klaar met het wijzingen van de volgorde van de Updates
+      records:
+        title: Updates
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Updates. Druk op 'Maak een nieuwe Update' om de eerste aan te maken.
+      update:
+        view_live_html: Bekijk deze update op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze update
+        delete: Verwijder deze update voor eeuwig
+  updates:
+    show:
+      other: Andere Updates

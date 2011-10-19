@@ -1,0 +1,76 @@
+
+<ul id="blocks">  <!--Blocks-->
+  <li id="blc-1" class="block">
+
+    <a href="#">
+      <canvas id="canvasElement1" class="canvasBall" width="310" height="330" img="images/home/materiais-h.png" imggray="images/home/materiais.png">
+        <%= render :partial => "canvas_config" %>
+      </canvas>
+    </a>
+
+    <a href="#" title="" class="bl-names">
+      <h2>Materiais</h2>
+      <img src="images/home/arrow.png" alt="" width="41" height="41" />
+    </a>
+  </li>
+  <li id="blc-2" class="block">
+
+    <a href="#">
+      <canvas id="canvasElement2" class="canvasBall" width="310" height="330" img="images/home/forum-h.png" imggray="images/home/forum.png">
+        <%= render :partial => "canvas_config" %>
+      </canvas>
+    </a>
+
+    <a href="#" title="" class="bl-names">
+      <h2>Fórum</h2>
+      <img src="images/home/arrow.png" alt="" width="41" height="41" />
+    </a>
+  </li>
+  <li id="blc-3" class="block last-child">
+
+    <a href="#">
+      <canvas id="canvasElement2" class="canvasBall" width="310" height="330" img="images/home/video-chat-h.png" imggray="images/home/video-chat.png">
+        <%= render :partial => "canvas_config" %>
+      </canvas>
+    </a>
+
+    <a href="#" title="" class="bl-names">
+      <h2>Vídeo Chat</h2>
+      <img src="images/home/arrow.png" alt="" width="41" height="41" />
+    </a>
+  </li>
+</ul>  <!--End Blocks-->
+<div class="clear"></div>
+<div class="left"> <!--Left-->
+
+  <h2><%= @page.title %></h2>
+  <%= raw @page.content_for :body %>
+  <%= link_to "Leia mais", page_path(@page), :class=>"button", :title=>"" %>
+  <%= link_to "Editar", edit_admin_page_path(@page), :class=>"button", :title=>"" if user_signed_in? %>
+</div> <!--End Left-->
+
+<div id="right"> <!--Right-->
+  <h2>Últimas Noticias</h2>
+  <ul>
+    <% if @noticias.empty? %>
+      <h3>Nenhuma notícia encontrada</h3>
+    <% else %>
+      <% @noticias.each do |noticia| %>
+        <li>
+          <h3><%= truncate(noticia.title, :length => 20) %> </h3>
+          <h4><%= noticia.created_at %></h4>
+          <% link_to update_path(noticia) do %>
+            <p class="clear"><%= truncate(sanitize(noticia.text, :tags => ""), :length => 135) %></p>
+          <% end %>
+        </li>
+      <% end %>
+      <%= link_to "Mais antigas", updates_path, :class=>"button" %>
+    <% end %>
+    
+  </ul>
+
+  <div id="calendar">
+    <h2>Calendário do Curso</h2>
+    <img src="images/home/calendar.png" width="128" height="128" alt="" />
+  </div>
+</div> <!--End Right-->

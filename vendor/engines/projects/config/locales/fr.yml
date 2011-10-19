@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    projects:
+      title: Projects
+  admin:
+    projects:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Project
+        reorder: Réordonner les Projects
+        reorder_done: Fin de réordonnancement des Projects
+      records:
+        title: Projects
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Project. Cliquer sur "Créer un(e) nouve(au/l/lle) Project" pour créer votre premi(er/ère) project.'
+      project:
+        view_live_html: Voir ce(t/tte) project <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) project
+        delete: Supprimer définitivement ce(t/tte) project
+  projects:
+    show:
+      other: Autres Projects

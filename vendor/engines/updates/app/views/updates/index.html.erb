@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="updates">
+    <% @updates.each do |update| %>
+      <li>
+        <%= link_to update.title, update_path(update) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

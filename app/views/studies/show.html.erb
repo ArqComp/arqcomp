@@ -1,0 +1,42 @@
+<% content_for :body_content_title do %>
+  <%= @study.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @study.title %>
+    </p>
+  </section>
+  <% if @study.link %>
+  <section>
+    <h1>Link</h1>
+    <p>
+      <%= link_to 'link', @study.link.url %>
+    </p>
+  </section>
+  <% end %>       
+        
+  <section>
+    <h1>Text</h1>
+    <p>
+      <%=raw @study.text %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="studies">
+      <% @studies.each do |study| %>
+        <li>
+          <%= link_to study.title, study_path(study) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

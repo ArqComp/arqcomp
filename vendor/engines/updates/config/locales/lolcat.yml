@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    updates:
+      title: Updates
+  admin:
+    updates:
+      actions:
+        create_new: CREATE NEW Update
+        reorder: REORDR Updates
+        reorder_done: DUN REORDERIN Updates
+      records:
+        title: Updates
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Updates YET. CLICK "CREATE NEW Update" 2 ADD UR FURST update.
+      update:
+        view_live_html: VIEW DIS update LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS update
+        delete: REMOOV DIS update FOREVR
+  updates:
+    show:
+      other: OTHR Updates

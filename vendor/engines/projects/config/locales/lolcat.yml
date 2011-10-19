@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    projects:
+      title: Projects
+  admin:
+    projects:
+      actions:
+        create_new: CREATE NEW Project
+        reorder: REORDR Projects
+        reorder_done: DUN REORDERIN Projects
+      records:
+        title: Projects
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Projects YET. CLICK "CREATE NEW Project" 2 ADD UR FURST project.
+      project:
+        view_live_html: VIEW DIS project LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS project
+        delete: REMOOV DIS project FOREVR
+  projects:
+    show:
+      other: OTHR Projects

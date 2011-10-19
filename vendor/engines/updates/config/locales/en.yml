@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    updates:
+      title: Updates
+  admin:
+    updates:
+      actions:
+        create_new: Add New Update
+        reorder: Reorder Updates
+        reorder_done: Done Reordering Updates
+      records:
+        title: Updates
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Updates yet. Click "Add New Update" to add your first update.
+      update:
+        view_live_html: View this update live <br/><em>(opens in a new window)</em>
+        edit: Edit this update
+        delete: Remove this update forever
+  updates:
+    show:
+      other: Other Updates

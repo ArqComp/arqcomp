@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    projects:
+      title: Projects
+  admin:
+    projects:
+      actions:
+        create_new: Maak een nieuwe Project
+        reorder: Wijzig de volgorde van de Projects
+        reorder_done: Klaar met het wijzingen van de volgorde van de Projects
+      records:
+        title: Projects
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Projects. Druk op 'Maak een nieuwe Project' om de eerste aan te maken.
+      project:
+        view_live_html: Bekijk deze project op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze project
+        delete: Verwijder deze project voor eeuwig
+  projects:
+    show:
+      other: Andere Projects

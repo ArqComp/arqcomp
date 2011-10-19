@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    studies:
+      title: Studies
+  admin:
+    studies:
+      actions:
+        create_new: Maak een nieuwe Study
+        reorder: Wijzig de volgorde van de Studies
+        reorder_done: Klaar met het wijzingen van de volgorde van de Studies
+      records:
+        title: Studies
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Studies. Druk op 'Maak een nieuwe Study' om de eerste aan te maken.
+      study:
+        view_live_html: Bekijk deze study op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze study
+        delete: Verwijder deze study voor eeuwig
+  studies:
+    show:
+      other: Andere Studies

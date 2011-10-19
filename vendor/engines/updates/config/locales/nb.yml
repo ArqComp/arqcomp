@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    updates:
+      title: Updates
+  admin:
+    updates:
+      actions:
+        create_new: Lag en ny Update
+        reorder: Endre rekkefølgen på Updates
+        reorder_done: Ferdig å endre rekkefølgen Updates
+      records:
+        title: Updates
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Updates enda. Klikk på "Lag en ny Update" for å legge til din første update.
+      update:
+        view_live_html: Vis hvordan denne update ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne update
+        delete: Fjern denne update permanent
+  updates:
+    show:
+      other: Andre Updates

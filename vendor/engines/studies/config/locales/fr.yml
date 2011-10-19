@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    studies:
+      title: Studies
+  admin:
+    studies:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Study
+        reorder: Réordonner les Studies
+        reorder_done: Fin de réordonnancement des Studies
+      records:
+        title: Studies
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Study. Cliquer sur "Créer un(e) nouve(au/l/lle) Study" pour créer votre premi(er/ère) study.'
+      study:
+        view_live_html: Voir ce(t/tte) study <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) study
+        delete: Supprimer définitivement ce(t/tte) study
+  studies:
+    show:
+      other: Autres Studies

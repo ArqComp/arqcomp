@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    studies:
+      title: Studies
+  admin:
+    studies:
+      actions:
+        create_new: Add New Study
+        reorder: Reorder Studies
+        reorder_done: Done Reordering Studies
+      records:
+        title: Studies
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Studies yet. Click "Add New Study" to add your first study.
+      study:
+        view_live_html: View this study live <br/><em>(opens in a new window)</em>
+        edit: Edit this study
+        delete: Remove this study forever
+  studies:
+    show:
+      other: Other Studies

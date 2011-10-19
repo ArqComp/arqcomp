@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    studies:
+      title: Studies
+  admin:
+    studies:
+      actions:
+        create_new: Lag en ny Study
+        reorder: Endre rekkefølgen på Studies
+        reorder_done: Ferdig å endre rekkefølgen Studies
+      records:
+        title: Studies
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Studies enda. Klikk på "Lag en ny Study" for å legge til din første study.
+      study:
+        view_live_html: Vis hvordan denne study ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne study
+        delete: Fjern denne study permanent
+  studies:
+    show:
+      other: Andre Studies

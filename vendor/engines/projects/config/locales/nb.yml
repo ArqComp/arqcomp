@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    projects:
+      title: Projects
+  admin:
+    projects:
+      actions:
+        create_new: Lag en ny Project
+        reorder: Endre rekkefølgen på Projects
+        reorder_done: Ferdig å endre rekkefølgen Projects
+      records:
+        title: Projects
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Projects enda. Klikk på "Lag en ny Project" for å legge til din første project.
+      project:
+        view_live_html: Vis hvordan denne project ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne project
+        delete: Fjern denne project permanent
+  projects:
+    show:
+      other: Andre Projects

@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    projects:
+      title: Projects
+  admin:
+    projects:
+      actions:
+        create_new: Add New Project
+        reorder: Reorder Projects
+        reorder_done: Done Reordering Projects
+      records:
+        title: Projects
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Projects yet. Click "Add New Project" to add your first project.
+      project:
+        view_live_html: View this project live <br/><em>(opens in a new window)</em>
+        edit: Edit this project
+        delete: Remove this project forever
+  projects:
+    show:
+      other: Other Projects
