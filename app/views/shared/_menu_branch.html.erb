@@ -1,0 +1,20 @@
+<%
+  if !!local_assigns[:apply_css] and (classes = replace_css(menu_branch_css(local_assigns))).any?
+    css = "#{classes.join(' ')}".html_safe
+  end
+  # dom_id DEPRECATED: REMOVE AT 1.1, serves no purpose same with css attributes 'first' and 'last'
+  dom_id = "#{menu_branch_counter}".html_safe if menu_branch.parent_id.nil?
+-%>
+<li class="<%=css%>">
+  <%#= ['', css, dom_id].compact.join(' ').gsub(/\ *$/, '').html_safe %>
+  <%= link_to menu_branch.title, menu_branch.url, :class=>css, :id=>dom_id -%>
+  <% if (children = menu_branch.children unless hide_children).present? -%>
+    <ul class='clearfix'>
+      <%= render :partial => '/shared/menu_branch', :collection => children,
+                 :locals => {
+                   :apply_css => local_assigns[:apply_css],
+                   :hide_children => !!hide_children
+                 } -%>
+    </ul>
+  <% end -%>
+</li>

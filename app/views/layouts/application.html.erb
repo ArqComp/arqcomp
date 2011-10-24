@@ -5,21 +5,25 @@
 <body>
   <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
   <div id="page_container">
-    <div id="header"> <!--Header-->
+      
+      <%#*<!--%>
+      <div id="header"> <!--Header-->
       <span id="logo"><h1>Arquiteturas de Computadores</h1></span>
 
 
       <ul id="nav">
-        <li><a class="current" href="index.html" title="Página Inicial">Home</a></li>
+        <li><%= link_to "Home", root_path, :class =>"current", :title=>"Página Inicial"%> </li>
         <li><a href="noticias.html" title="Notícias">Notícias</a></li>
         <li><a href="disciplina.html" title="Disciplina">Disciplina</a></li>
         <li><a href="conteudo.html" title="Conteúdo">Conteúdo</a></li>
         <li><a href="trabalho.html" title="Trabalhos">Trabalhos</a></li>
         <li class="last-child"><a href="monitoria.html" title="Monitoria">Monitoria</a></li>
       </ul>
-    </div>  <!--End Header-->
+      </div>  <!--End Header-->
+      <%#*-->%>
+      
 
-
+    <%#= render :partial => "/shared/header" -%>
     <%= yield %>
 
     <div class="clear"></div>
