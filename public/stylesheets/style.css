@@ -16,9 +16,21 @@ body{
 	min-width: 920px;
 }
 
+.wrapper{
+	overflow: hidden;
+    width: 100%;
+}
+
 a{
 	display: block;
 	text-decoration:none;	
+}
+
+p{
+	font-size: 0.9em;
+	line-height: 1.43em;
+	margin: 0;
+    word-spacing: 1px;	
 }
 
 li{
@@ -71,7 +83,7 @@ img {
 #computer{
 	position: absolute;
     right: 34px;
-    top: 113px;
+    top: 107px;
 }
 
 #logo{
@@ -153,7 +165,6 @@ img {
 .page-call{
 	padding: 62px 0 0 77px;	
 	position: relative;
-	top: -50px;
 }
 
 .page-call p{
@@ -167,7 +178,6 @@ img {
 	font-size: 2.2em;
 	font-weight: bold;
 	position: relative;
-	top: -20px;
 }
 /*End Header*/
 
@@ -222,11 +232,16 @@ img {
 
 #links{
 	position: relative;
-    top: -45px;	
+    top: -20px;	
 }
 
 #links a{
 	color: #FFF;
+	float: left;
+}
+
+#links a:hover{
+	color: #20b7c9;	
 }
 
 #help-footer{
@@ -240,3 +255,109 @@ img {
 	margin: 0 0 0 5px;	
 }
 /*End Footer*/
+
+/*Main*/
+.main a{
+	background: url("../images/application/read_more.png") no-repeat scroll left center transparent;
+    clear: both;
+    color: #2670C3;
+    display: block;
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0 0 2px 12px;
+    text-decoration: none;	
+}
+
+.main a:hover{
+	text-decoration: underline;
+}
+/*End Main*/
+
+/*Home*/
+
+	.col-1, .col-2{
+		float: left;	
+	}
+
+	/*Col-1*/
+	.col-1{
+		margin: 0 60px 0 0;
+		padding-bottom: 33px;
+		width: 500px;
+	}
+	
+	.col-1 h3{
+		border-bottom: 1px dashed #999;
+		color: #000000;
+		font-size: 1.9em;
+		font-weight: normal;
+		font-family: 'Varela', sans-serif;
+		letter-spacing: -2px;
+		line-height: 1.2em;
+		margin-bottom: 12px;	
+	}
+	
+	.col-1 .item{
+		margin: 0 0 60px 0;	
+	}
+	
+	.col-1 ul{
+		margin: 0;
+		padding: 0;	
+	}
+	
+	.col-1 li{
+		float: left;
+		margin: 0 25px 0 0;
+		width: 140px;	
+	}
+	
+	.col-1 img{
+		margin: -5px 0 0;
+	}	
+	/*End Col-1*/
+
+	/*Col-2*/
+	.col-2{
+		padding: 94px 0 0;
+    	width: 350px;	
+	}
+	
+	.col-2 h2{
+		border-bottom: 1px dashed #999;
+		color: #000000;
+		font-family: 'Varela', sans-serif;
+		font-size: 1.3em;
+		margin: 0 0 20px;
+		padding: 0 0 10px;	
+	}
+	
+	.new{
+		border-bottom: 1px dashed #666666;
+		margin-bottom: 20px;
+		padding-bottom: 20px;	
+	}
+	
+	.news_image img{
+		float: left;
+		margin: 3px 10px 0 0;	
+	}
+	
+	.new h3{
+		float: left;
+		font-size: 1em;
+		margin: 0 20px 0 0;
+	}
+	
+	.new h4{
+		font-size: 0.8em;
+	}
+	
+	.new p{
+		margin: -10px 0 0;	
+	}
+	
+	/*End Col-2*/
+
+/*End Home*/
