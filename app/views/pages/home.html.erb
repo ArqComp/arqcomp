@@ -1,79 +1,79 @@
 <div class="main">  <!--Main-->
-	<div class="wrapper"> <!--Wrapper-->
-	
-		<div class="col-1">
-		
-			<div class="item">
-				<h3>Duis nunc turpis</h3>
-				
-				<p>Nulla et lorem ante, vitae fermentum sem. Integer nec purus justo. Nullam ut nisl quis massa varius vehicula id sed tellus. Sed hendrerit, lorem in tristique mattis, nisl risus viverra lorem, in rhoncus elit dui ac arcu. Quisque sed dictum ipsum. Quisque mollis pellentesque libero non viverra. Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-				
-				<%= link_to "Leia mais", page_path(@page), :class=>"", :title=>"" %>
-			</div>
-			
-			<div class="item">
-				<h3>Class aptent taciti</h3>
-				
-				<p>Nulla et lorem ante, vitae fermentum sem. Integer nec purus justo. Nullam ut nisl quis massa varius vehicula id sed tellus. Sed hendrerit, lorem in tristique mattis, nisl risus viverra lorem, in rhoncus elit dui ac arcu. Quisque sed dictum ipsum. Quisque mollis pellentesque libero non viverra. Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-				
-				<%= link_to "Leia mais", page_path(@page), :class=>"", :title=>"" %>
-			</div>
-			
-			<div class="item">
-				<h3>Veja também</h3>
-				
-				<ul>
-					<li>
-						<h4>Per inceptos himenaeos</h4>
-						<img alt="" src="images/home/img.png">
-						<p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
-					</li>
-					<li>
-						<h4>Per inceptos himenaeos</h4>
-						<img alt="" src="images/home/img.png">
-						<p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
-					</li>
-					<li>
-						<h4>Per inceptos himenaeos</h4>
-						<img alt="" src="images/home/img.png">
-						<p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
-					</li>
-				</ul>
-			</div>
-		
-		</div>
-		
-		<div class="col-2">
-		
-			<div class="item">
-				<h2>Latest <span>News</span></h2>
-			
-				<% if @noticias.empty? %>
-					<h3>Nenhuma notícia encontrada</h3>
-					<% else %>
-						<% @noticias.each do |noticia| %>
-						<li>
-							<div class="news_image">
-								<span></span>
-								<img alt="image" src="images/home/news_image_frame.png">
-							</div>
-							<div class="new">
-								<h3><%= truncate(noticia.title, :length => 20) %></h3>
-								<h4><%= noticia.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
-								<p><%= truncate(sanitize(noticia.text, :tags => ""), :length => 55) %></p>
-								<%= link_to "Leia mais", update_path(noticia), :class=>"button", :title=>"" %>
-							</div>
-						</li>
-					<% end %>
-				<% end %>
-			</div>
-			
-			<div class="item">
-				<div id="calendar">
-					<h3>Calendário do Curso</h3>
-					<img src="images/home/calendar.png" width="128" height="128" alt="" />
-				</div>
-			</div>
-		
-	</div> <!--End Wrapper-->
-</div>  <!--End Main-->
+  <div class="wrapper"> <!--Wrapper-->
+
+    <div class="col-1">
+
+      <div class="item">
+        <h3>Duis nunc turpis</h3>
+
+        <p>Nulla et lorem ante, vitae fermentum sem. Integer nec purus justo. Nullam ut nisl quis massa varius vehicula id sed tellus. Sed hendrerit, lorem in tristique mattis, nisl risus viverra lorem, in rhoncus elit dui ac arcu. Quisque sed dictum ipsum. Quisque mollis pellentesque libero non viverra. Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+
+        <%= link_to "Leia mais", page_path(@page), :class=>"", :title=>"" %>
+      </div>
+
+      <div class="item">
+        <h3>Class aptent taciti</h3>
+
+        <p>Nulla et lorem ante, vitae fermentum sem. Integer nec purus justo. Nullam ut nisl quis massa varius vehicula id sed tellus. Sed hendrerit, lorem in tristique mattis, nisl risus viverra lorem, in rhoncus elit dui ac arcu. Quisque sed dictum ipsum. Quisque mollis pellentesque libero non viverra. Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+
+        <%= link_to "Leia mais", page_path(@page), :class=>"", :title=>"" %>
+      </div>
+
+      <div class="item">
+        <h3>Veja também</h3>
+
+        <ul>
+          <li>
+            <h4>Per inceptos himenaeos</h4>
+            <img alt="" src="images/home/img.png">
+            <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
+          </li>
+          <li>
+            <h4>Per inceptos himenaeos</h4>
+            <img alt="" src="images/home/img.png">
+            <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
+          </li>
+          <li>
+            <h4>Per inceptos himenaeos</h4>
+            <img alt="" src="images/home/img.png">
+            <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="col-2">
+
+      <div class="item">
+        <h2>Latest <span>News</span></h2>
+
+        <% if @noticias.empty? %>
+          <h3>Nenhuma notícia encontrada</h3>
+        <% else %>
+          <% @noticias.each do |noticia| %>
+            <li>
+              <div class="news_image">
+                <span></span>
+                <img alt="image" src="images/home/news_image_frame.png">
+              </div>
+              <div class="new">
+                <h3><%= truncate(noticia.title, :length => 20) %></h3>
+                <h4><%= noticia.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
+                <p><%= truncate(sanitize(noticia.text, :tags => ""), :length => 55) %></p>
+                <%= link_to "Leia mais", update_path(noticia), :class=>"button", :title=>"" %>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="item">
+        <div id="calendar">
+          <h3>Calendário do Curso</h3>
+          <img src="images/home/calendar.png" width="128" height="128" alt="" />
+        </div>
+      </div>
+
+    </div> <!--End Wrapper-->
+  </div>  <!--End Main-->
