@@ -13,8 +13,13 @@
           <%= render :partial => "/shared/header" -%>
 
           <div class="page-call">
-            <p>Lorem ipsum dolor sit amet</p>
-            <p class="txt-important">Donec et nisl non tellus aliquet nisl non</p>
+            <% if @page.content_for :page_call %>
+              <%= raw @page.content_for :page_call %>
+            <% else %>
+              <p><%= @page.title %></p>
+            <% end %>
+            <%#*<p>Lorem ipsum dolor sit amet</p>%>
+            <%#*<p class="txt-important">Donec et nisl non tellus aliquet nisl non</p>%>
           </div>
         </div>  <!--End Header-->
 
