@@ -1,15 +1,4 @@
-module ApplicationHelper
-
-  def replace_css lista
-    lista.collect do |e|
-      e = "first-child" if e == "first"
-      e = "last-child" if e == "last"
-      e = "current" if e == "selected"
-      e
-    end
-  end
-
-  
+module EventsHelper
   def month_link(month_date)
     link_to(I18n.localize(month_date, :format => "%B"), {:month => month_date.month, :year => month_date.year})
   end
@@ -23,8 +12,7 @@ module ApplicationHelper
       :month_name_text => I18n.localize(@shown_month, :format => "%B %Y"),
       :previous_month_text => "<< " + month_link(@shown_month.prev_month),
       :next_month_text => " >>" + month_link(@shown_month.next_month) ,
-#      :use_all_day => true,
-      :height => 200
+      :use_all_day => true
     }
   end
 
@@ -33,10 +21,9 @@ module ApplicationHelper
     calendar event_calendar_opts do |args|
       event, day = args[:event], args[:day]
       html = %(<a href="/events/#{event.id}" title="#{h(event.name)}">)
-#      html << display_event_time(event, day)
+      html << display_event_time(event, day)
       html << %(#{h(event.name)}</a>)
       html
     end
   end
-  
 end
