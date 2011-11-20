@@ -4,4 +4,6 @@ class Update < ActiveRecord::Base
 
   validates :title, :presence => true, :uniqueness => true
   
+  belongs_to :image, :class_name => 'Image'
+  
 end
