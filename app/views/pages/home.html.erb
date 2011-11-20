@@ -25,17 +25,17 @@
         <ul>
           <li>
             <h4>Per inceptos himenaeos</h4>
-            <img alt="" src="images/home/img.png">
+            <img alt="" src="images/home/youtube.png">
             <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
           </li>
           <li>
             <h4>Per inceptos himenaeos</h4>
-            <img alt="" src="images/home/img.png">
+            <img alt="" src="images/home/slide.png">
             <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
           </li>
-          <li>
+          <li class="last">
             <h4>Per inceptos himenaeos</h4>
-            <img alt="" src="images/home/img.png">
+            <img alt="" src="images/home/question.png">
             <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
           </li>
         </ul>
@@ -54,8 +54,12 @@
           <% @noticias.each do |noticia| %>
             <li>
               <div class="news_image">
-                <span></span>
-                <img alt="image" src="images/home/news_image_frame.png">
+					<span></span>
+					<% if noticia.image.nil? %>
+						<img alt="image" src="images/home/new1.png">
+					<% else %>
+						<img alt="image" src="<%=noticia.image.url%>">
+					<% end %>
               </div>
               <div class="new">
                 <h3><%= truncate(noticia.title, :length => 20) %></h3>
