@@ -10,6 +10,16 @@
   </div>
   
   <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+          :f => f,
+          :field => :image_id,
+          :image => @update.image,
+          :toggle_image_display => false
+        } %>
+  </div>
+
+  <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
         <% [:text].each_with_index do |part, part_index| %>
