@@ -188,7 +188,6 @@ img {
     margin: 0 auto;
     padding: 30px;
     position: relative;
-    width: 980px;
 }
 
 #footer-content{
@@ -201,7 +200,7 @@ img {
     font-family: "Times New Roman",Times,serif;
     font-size: 1.5em;
     height: 35px;
-    left: 30px;
+    left: -20px;
     padding-top: 9px;
     position: absolute;
     text-align: center;
@@ -216,7 +215,7 @@ img {
 
 #footer p{
 	font-size: 0.9em;
-	left: -30px;
+    left: -85px;
     position: relative;
     top: 35px;
 }
