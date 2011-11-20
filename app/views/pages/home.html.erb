@@ -55,7 +55,11 @@
             <li>
               <div class="news_image">
                 <span></span>
-                <img alt="image" src="images/home/news_image_frame.png">
+                <% if noticia.image.nil? %>
+                  <img alt="image" src="images/home/news_image_frame.png">
+                <% else %>
+                <img alt="image" src="<%= noticia.image.url %>">
+                <% end %>
               </div>
               <div class="new">
                 <h3><%= truncate(noticia.title, :length => 20) %></h3>
