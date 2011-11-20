@@ -5,12 +5,13 @@
   <% css = [(css || 'menu'), 'clearfix'].flatten.join(' ') %>
   <% hide_children = RefinerySetting.find_or_set(:menu_hide_children, false) if hide_children.nil? %>
 
-  <ul id="nav">
+  <ul id="<%= nav_id %>">
     <%= render :partial => '/shared/menu_branch', :collection => roots,
       :locals => {
       :hide_children => hide_children,
       :sibling_count => (roots.length - 1),
-      :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
+      :apply_css => true,  #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
+      :item_id => item_id
     } -%>
   </ul>
   <!--

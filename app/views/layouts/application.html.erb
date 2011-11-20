@@ -2,65 +2,52 @@
 <%= render :partial => "/shared/html_tag" %>
 <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
 <%= render :partial => "/shared/head" %>
-	<body>
-		<%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-		
-			<div id="page-top"> <!--Page-top-->
-				<div id="page-bottom"> <!--Page-bottom-->
-					<div id="page_container"> <!--Page_container-->
-					
-						<div id="header"> <!--Header-->
-							<div id="computer"><img alt="" src="images/application/computer.png"></div>
-							
-							<a id="logo"><h1><span>Arquiteturas de Computadores</span></h1></a>
-							
-							<ul id="nav">
-								<li id="item-1"><%= link_to "Home", root_path, :class =>"current", :title=>"Página Inicial"%> </li>
-								<li id="item-2"><a href="noticias.html" title="Notícias">Notícias</a></li>
-								<li id="item-3"><a href="disciplina.html" title="Disciplina">Disciplina</a></li>
-								<li id="item-4"><a href="conteudo.html" title="Conteúdo">Conteúdo</a></li>
-								<li id="item-5"><a href="trabalho.html" title="Trabalhos">Trabalhos</a></li>
-								<li id="item-6"><a href="monitoria.html" title="Monitoria">Monitoria</a></li>
-							</ul>
-							
-							<div class="page-call">
-								<p>Lorem ipsum dolor sit amet</p>
-								<p class="txt-important">Donec et nisl non tellus aliquet nisl non</p>
-							</div>
-						</div>  <!--End Header-->
-						
-						<div id="content">
-							<%= yield %>
-						</div>	
-		
-						<div id="footer" class="clear"> <!--Footer-->
-							<div id="footer-content"> <!--Footer-content-->
-						
-								<div id="footer-title">Site Info.</div>
-								
-								<p>2011 &copy; AC | <span>All rights reserved.</span></p>
-							
-								<div id="links">
-									<ul id="nav-footer">
-										<li><a class="current" href="index.html" title="Página Inicial">Home</a><span>-</span></li>
-										<li><a href="noticias.html" title="Notícias">Notícias</a><span>-</span></li>
-										<li><a href="disciplina.html" title="Disciplina">Disciplina</a><span>-</span></li>
-										<li><a href="conteudo.html" title="Conteúdo">Conteúdo</a><span>-</span></li>
-										<li><a href="trabalho.html" title="Trabalhos">Trabalhos</a><span>-</span></li>
-										<li><a href="monitoria.html" title="Monitoria">Monitoria</a></li>
-									</ul>
-									
-									<ul id="help-footer" class="clear">
-										<li><a href="login.html" title="Login">Login </a><span>&bull;</span></li>
-										<li><a href="cadastro.html" title="Cadrasto">Cadrasto </a><span>&bull;</span></li>
-										<li><a href="ajuda.html" title="Ajuda">Sobre</a></li>
-									</ul>
-								</div>
-							</div> <!--Footer-content-->
-						</div>  <!--End Footer-->       
-		
-					</div> <!--End Page_container-->
-				</div> <!--End Page-bottom-->
-			</div> <!--End Page-top-->
-	</body>
+<body>
+  <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+
+  <div id="page-top"> <!--Page-top-->
+    <div id="page-bottom"> <!--Page-bottom-->
+      <div id="page_container"> <!--Page_container-->
+
+        <div id="header"> <!--Header-->
+          <%= render :partial => "/shared/header" -%>
+
+          <div class="page-call">
+            <% if @page.content_for :page_call %>
+              <%= raw @page.content_for :page_call %>
+            <% else %>
+              <p><%= @page.title %></p>
+            <% end %>
+            <%#*<p>Lorem ipsum dolor sit amet</p>%>
+            <%#*<p class="txt-important">Donec et nisl non tellus aliquet nisl non</p>%>
+          </div>
+        </div>  <!--End Header-->
+
+        <div id="content">
+          <%= yield %>
+        </div>	
+
+        <div id="footer" class="clear"> <!--Footer-->
+          <div id="footer-content"> <!--Footer-content-->
+
+            <div id="footer-title">Site Info.</div>
+
+            <p>2011 &copy; AC | <span>All rights reserved.</span></p>
+
+            <div id="links">
+              <%= render :partial => "/shared/footer" -%>
+
+              <ul id="help-footer" class="clear">
+                <li><a href="login.html" title="Login">Login </a><span>&bull;</span></li>
+                <li><a href="cadastro.html" title="Cadrasto">Cadrasto </a><span>&bull;</span></li>
+                <li><a href="ajuda.html" title="Ajuda">Sobre</a></li>
+              </ul>
+            </div>
+          </div> <!--Footer-content-->
+        </div>  <!--End Footer-->       
+
+      </div> <!--End Page_container-->
+    </div> <!--End Page-bottom-->
+  </div> <!--End Page-top-->
+</body>
 </html>

@@ -65,3 +65,4 @@ gem 'event-calendar', :require => 'event_calendar'
 gem 'ruby-debug19'
 gem 'will_paginate'
 #gem "tablebuilder", :git => "https://github.com/mbreit/tablebuilder"
+gem 'refinerycms-events', '1.0', :path => 'vendor/engines'

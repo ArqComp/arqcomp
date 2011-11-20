@@ -1,7 +1,13 @@
-<div id="header"> <!--Header-->
-  <span id="logo"><h1><%= link_to RefinerySetting.find_or_set(:site_name, "Arquiteturas de Computadores"), root_path %></h1></span>
-  <%= render(:partial => "/shared/menu", :locals => {
-      :dom_id => 'menu',
-      :css => 'menu'
-    }) %>
-</div>  <!--End Header-->
+<div id="computer"><img alt="" src="images/application/computer.png"></div>
+
+<a id="logo"><h1><span>Arquiteturas de Computadores</span></h1></a>
+<!--
+<span id="logo"><h1><%= link_to RefinerySetting.find_or_set(:site_name, "Arquiteturas de Computadores"), root_path %></h1></span>
+-->
+<%= render(:partial => "/shared/menu", :locals => {
+    :dom_id => 'menu',
+    :css => 'menu',
+    :nav_id => "nav",
+    :item_id => true
+    
+  }) %>
