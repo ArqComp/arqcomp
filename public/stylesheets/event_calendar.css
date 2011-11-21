@@ -18,9 +18,9 @@
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 11px;
   line-height: 14px;
-  margin: 0;
-  padding: 0;
   border-bottom: 1px solid #d5d5d5;
+  margin: 0 0 0 15px;
+  width: 240px;
 }
 
 /* Month name header & links */
@@ -31,13 +31,13 @@
 }
 
 .ec-month-name {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: bold;
   padding: 0 5px 0 0;
 }
 
 .ec-month-nav {
-
+	width: 93px;
 }
 
 /* Containers */
@@ -240,12 +240,12 @@ a.ec-day-link {
 /**/
 .main .ec-calendar a{
 	background: none;
-	left: -5px;
-    position: relative;
 }
 
 .ec-previous-month a{
 	float: left;
+	left: -5px;
+    position: relative;
 }
 
 .ec-event-bg{

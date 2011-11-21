@@ -1,33 +1,19 @@
-<% content_for :body_content_title do %>
-  <%= @update.title %>
-<% end %>
+<div class="main">  <!--Main-->
+	<div class="back-right"> <!--Back-right-->
+		<div class="wrapper"> <!--Wrapper-->
+		
+			<div class="col-1">
+			
+				<%= render :partial => "/shared/content_page" %>
+				
+			</div>
+			
+			<div class="col-2">
+			
+			</div>
+			
+		</div><!--Wrapper-->
+	</div> <!--Back-right-->
+	</div>  <!--End Main-->
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @update.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Text</h1>
-    <p>
-      <%=raw @update.text %>
-    </p>
-  </section>
-<% end %>
 
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="updates">
-      <% @updates.each do |update| %>
-        <li>
-          <%= link_to update.title, update_path(update) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render :partial => "/shared/content_page" %>
