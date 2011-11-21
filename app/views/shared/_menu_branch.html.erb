@@ -1,5 +1,6 @@
 <%
 if !!local_assigns[:apply_css] and (classes = replace_css(menu_branch_css(local_assigns))).any?
+  classes << "current" if menu_branch.title == @page.title
   css = "#{classes.join(' ')}".html_safe
 end
 # dom_id DEPRECATED: REMOVE AT 1.1, serves no purpose same with css attributes 'first' and 'last'

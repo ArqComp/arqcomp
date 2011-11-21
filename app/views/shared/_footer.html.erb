@@ -1,6 +1,22 @@
-<%= render(:partial => "/shared/menu", :locals => {
-    :dom_id => 'menu',
-    :css => 'menu',
-    :nav_id => "nav-footer",
-    :item_id => false
-  }) %>
+<div id="footer-content"> <!--Footer-content-->
+
+  <div id="footer-title">Site Info.</div>
+
+  <p>2011 &copy; AC | <span>All rights reserved.</span></p>
+
+  <div id="links">
+
+    <%= render(:partial => "/shared/menu", :locals => {
+        :dom_id => 'menu',
+        :css => 'menu',
+        :nav_id => "nav-footer",
+        :item_id => false
+      }) %>
+
+    <ul id="help-footer" class="clear">
+      <li><%= link_to "Login", new_user_session_path, :title => "Login" %><span>&bull;</span></li>
+      <li><%= link_to "Cadastro", new_user_registration_path, :title => "Cadastro" %><span>&bull;</span></li>
+      <li><%= link_to "Sobre", page_path("sobre"), :title => "Sobre" %></li>
+    </ul>
+  </div>
+</div> <!--Footer-content-->

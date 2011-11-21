@@ -10,7 +10,9 @@
       <div id="page_container"> <!--Page_container-->
 
         <div id="header"> <!--Header-->
-          <%= render :partial => "/shared/header" -%>
+          
+
+          <%= render :partial => "/shared/header" %>
 
           <div class="page-call">
             <% if @page.content_for :page_call %>
@@ -18,8 +20,6 @@
             <% else %>
               <p><%= @page.title %></p>
             <% end %>
-            <%#*<p>Lorem ipsum dolor sit amet</p>%>
-            <%#*<p class="txt-important">Donec et nisl non tellus aliquet nisl non</p>%>
           </div>
         </div>  <!--End Header-->
 
@@ -28,22 +28,7 @@
         </div>	
 
         <div id="footer" class="clear"> <!--Footer-->
-          <div id="footer-content"> <!--Footer-content-->
-
-            <div id="footer-title">Site Info.</div>
-
-            <p>2011 &copy; AC | <span>All rights reserved.</span></p>
-
-            <div id="links">
-              <%= render :partial => "/shared/footer" -%>
-
-              <ul id="help-footer" class="clear">
-                <li><a href="login.html" title="Login">Login </a><span>&bull;</span></li>
-                <li><a href="cadastro.html" title="Cadrasto">Cadrasto </a><span>&bull;</span></li>
-                <li><a href="ajuda.html" title="Ajuda">Sobre</a></li>
-              </ul>
-            </div>
-          </div> <!--Footer-content-->
+          <%= render :partial => "/shared/footer" -%>
         </div>  <!--End Footer-->       
 
       </div> <!--End Page_container-->
