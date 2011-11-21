@@ -271,15 +271,18 @@ img {
 
 /*Main*/
 .main a, .see-more, .edit{
-	background: url("../images/application/read_more.png") no-repeat scroll left center transparent;
     clear: both;
     color: #2670C3;
     display: block;
     float: right;
-    font-size: 12px;
     font-weight: normal;
     padding: 0 0 2px 12px;
     text-decoration: none;	
+}
+
+.see-more, .edit{
+	background: url("../images/application/read_more.png") no-repeat scroll left center transparent;
+	font-size: 12px;
 }
 
 .main a.edit{
@@ -287,7 +290,7 @@ img {
 	padding: 0 0 0 15px;
 }
 
-.main a:hover{
+.see-more:hover, .edit:hover{
 	text-decoration: underline;
 }
 
