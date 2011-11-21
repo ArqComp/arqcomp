@@ -15,7 +15,7 @@ pt-BR:
       records:
         title: Conteúdos
         sorry_no_results: Descupe! Nenhum resultado foi encontrado.
-        no_items_yet: Não há Conteúdos ainda. Clique em "Adicionar Novo Conteúdo" para adicionar seu primeiro conteúdo
+        no_items_yet: Não há Conteúdos ainda. Clique em "Adicionar Novo Conteúdo" para adicionar seu primeiro conteúdo.
       study:
         view_live_html: Ver este conteúdo <br/><em>(abrir em uma nova janela)</em>
         edit: Editar este conteúdo

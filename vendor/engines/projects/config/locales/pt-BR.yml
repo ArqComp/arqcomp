@@ -1,0 +1,25 @@
+pt-BR:
+  shared:
+    admin:
+      image_picker:
+        image: imagem
+  plugins:
+    projects:
+      title: Projetos
+  admin:
+    projects:
+      actions:
+        create_new: Adicionar Novo Projeto
+        reorder: Reordenar projetos
+        reorder_done:  Fim da reordenação dos projetos
+      records:
+        title: Projetos
+        sorry_no_results: Descupe! Nenhum resultado foi encontrado.
+        no_items_yet: Não há Projetos ainda. Clique em "Adicionar Novo Projeto" para adicionar seu primeiro projeto.
+      project:
+        view_live_html: Ver este projeto <br/><em>(abrir em uma nova janela)</em>
+        edit: Editar este projeto
+        delete: Apagar este projeto para sempre
+  projects:
+    show:
+      other: Outros projetos

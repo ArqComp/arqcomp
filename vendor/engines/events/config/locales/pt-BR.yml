@@ -1,0 +1,25 @@
+pt-BR:
+  shared:
+    admin:
+      image_picker:
+        image: imagem
+  plugins:
+    events:
+      title: Eventos
+  admin:
+    events:
+      actions:
+        create_new: Adicionar novo Evento
+        reorder: Reordenar Eventos
+        reorder_done: Fim da reordenação dos eventos
+      records:
+        title: Eventos
+        sorry_no_results: Descupe! Nenhum resultado foi encontrado.
+        no_items_yet: Não há Eventos ainda. Clique em "Adicionar Novo Eventos" para adicionar seu primeiro evento.
+      event:
+        view_live_html: Ver este evento <br/><em>(abrir em uma nova janela)</em>
+        edit: Editar este evento
+        delete: Apagar este evento para sempre
+  events:
+    show:
+      other: Outros eventos

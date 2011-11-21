@@ -1,0 +1,25 @@
+pt-BR:
+  shared:
+    admin:
+      image_picker:
+        image: imagem
+  plugins:
+    updates:
+      title: Notícias
+  admin:
+    updates:
+      actions:
+        create_new: Adicionar Nova Notícia
+        reorder: Reordenar notícias
+        reorder_done: Fim da reordenação das notícias
+      records:
+        title: Notícias
+        sorry_no_results: Descupe! Nenhum resultado foi encontrado.
+        no_items_yet: Não há Notícias ainda. Clique em "Adicionar Nova Notícia" para adicionar sua primeira notícia.
+      update:
+        view_live_html: Ver esta notícia <br/><em>(abrir em uma nova janela)</em>
+        edit: Editar esta notícia
+        delete: Apagar esta notícia para sempre
+  updates:
+    show:
+      other: Outros notícias
