@@ -3,43 +3,18 @@
 
     <div class="col-1">
 
-      <div class="item">
-        <h3>Duis nunc turpis</h3>
+      <% @page.children.each do |child| %>
+        <% if child.show_in_menu %>
+          <div class="item">
+            <h3><%= child.title %></h3>
+            <%= raw child.content_for :side_body %>
 
-        <p>Nulla et lorem ante, vitae fermentum sem. Integer nec purus justo. Nullam ut nisl quis massa varius vehicula id sed tellus. Sed hendrerit, lorem in tristique mattis, nisl risus viverra lorem, in rhoncus elit dui ac arcu. Quisque sed dictum ipsum. Quisque mollis pellentesque libero non viverra. Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-
-        <%= link_to "Leia mais", page_path(@page), :class=>"", :title=>"" %>
-      </div>
-
-      <div class="item">
-        <h3>Class aptent taciti</h3>
-
-        <p>Nulla et lorem ante, vitae fermentum sem. Integer nec purus justo. Nullam ut nisl quis massa varius vehicula id sed tellus. Sed hendrerit, lorem in tristique mattis, nisl risus viverra lorem, in rhoncus elit dui ac arcu. Quisque sed dictum ipsum. Quisque mollis pellentesque libero non viverra. Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-
-        <%= link_to "Leia mais", page_path(@page), :class=>"", :title=>"" %>
-      </div>
-
-      <div class="item">
-        <h3>Veja também</h3>
-
-        <ul>
-          <li>
-            <h4>Per inceptos himenaeos</h4>
-            <img alt="" src="images/home/youtube.png">
-            <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
-          </li>
-          <li>
-            <h4>Per inceptos himenaeos</h4>
-            <img alt="" src="images/home/slide.png">
-            <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
-          </li>
-          <li class="last">
-            <h4>Per inceptos himenaeos</h4>
-            <img alt="" src="images/home/question.png">
-            <p>Duis nunc turpis, feugiat vel facilisis ut, tincidunt ac ligula.</p>
-          </li>
-        </ul>
-      </div>
+            <% if not child.skip_to_first_child %>
+              <%= link_to "Leia mais", page_path(child), :class=>"", :title=>"" %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
 
     </div>
 
@@ -54,12 +29,12 @@
           <% @noticias.each do |noticia| %>
             <li>
               <div class="news_image">
-					<span></span>
-					<% if noticia.image.nil? %>
-						<img alt="image" src="images/home/new1.png">
-					<% else %>
-						<img alt="image" src="<%=noticia.image.url%>">
-					<% end %>
+                <span></span>
+                <% if noticia.image.nil? %>
+                  <img alt="image" src="images/home/new1.png">
+                <% else %>
+                  <img alt="image" src="<%=noticia.image.url%>">
+                <% end %>
               </div>
               <div class="new">
                 <h3><%= truncate(noticia.title, :length => 20) %></h3>
@@ -76,7 +51,7 @@
         <div id="calendar">
           <h3>Calendário do Curso</h3>
           <%= raw(event_calendar) %>
-          <%#*<img src="images/home/calendar.png" width="128" height="128" alt="" />%>
+<%#*<img src="images/home/calendar.png" width="128" height="128" alt="" />%>
         </div>
       </div>
 
