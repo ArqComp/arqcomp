@@ -366,3 +366,17 @@ img {
 	/*End Col-2*/
     
 /*End Home*/
+
+/*Content*/
+   .content-page h3{
+		border-bottom: 1px dashed #999;
+		color: #000000;
+		font-size: 2.6em;
+		font-weight: normal;
+		font-family: 'Varela', sans-serif;
+		letter-spacing: -2px;
+		line-height: 1.2em;
+		margin: 10px 0;	
+        padding: 12px 0; 
+	}
+/*End Content*/
