@@ -3,24 +3,10 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @study.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Link</h1>
-    <p>
-      <%= link_to 'link', @study.link.url %>
-    </p>
-  </section>
-  <section>
-    <h1>Text</h1>
-    <p>
-      <%=raw @study.text %>
-    </p>
-  </section>
+  <span><%= link_to 'Download', @study.link.url if @study.link %></span> 
+  <div>
+    <%=raw @study.text %>
+  </div>
 <% end %>
 
 <% content_for :body_content_right do %>

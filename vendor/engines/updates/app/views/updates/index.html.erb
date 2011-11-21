@@ -1,11 +1,9 @@
-<div id="main" class="clear pg-int">  <!--Main-->
-<div class="left"> <!--Left-->
-  <h2>Notícias</h2>
-  <ul id="new">
+<% content_for :body_content_left do %>
+  <ul>
     <% @updates.each do |update| %>
       <li>
         <div class="call">
-          <h3><%= update.title %> </h3>
+          <h2><%= update.title %> </h2>
           <h4><%= update.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
         </div>
         <p class="clear"><%= truncate(sanitize(update.text, :tags=>""), :length => 190) %> </p>
@@ -16,10 +14,10 @@
       </li>
     <% end %>
     <%= will_paginate @updates %>
-
-    <%#*<a href="#" title="">1 2 3 ... 10</a>%>
   </ul>  
-</div> <!--End Left-->     
+<% end %>
+
+<% content_for :body_content_right do %>
 <div class="veja"> <!--Right-->
 <h2>Veja também</h2>
 <ul>
@@ -43,10 +41,8 @@
   </li>
 </ul>
 
-<div id="calendar">
-  <h2>Calendário do Curso</h2>
-  <img src="images/home/calendar.png" width="128" height="128" alt="" />
+<%= render :partial => "/shared/calendar" %>
 </div>
-</div> <!--End Right-->      
-<%#= render :partial => "/shared/content_page" %>
-</div> <!--End Main-->
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

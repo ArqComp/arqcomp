@@ -1,4 +1,27 @@
+<%
+  title = yield(:body_content_title)
+  title = @page.title if title.empty?
+
+  body = yield(:body_content_left)
+  body = @page.content_for :body if body.empty?
+  
+  side_body = yield(:body_content_right)
+  side_body = @page.content_for :side_body if side_body .empty?
+  
+-%>
+
 <div class="content-page">
-  <h3><%= @page.title %></h1>
-  <%= raw @page.content_for :body %>
+  <h1><%= title %></h1>
+  <% unless side_body %>
+    <%= raw body %>
+  <% else %>
+  <div class="content-col-1">
+    <%= raw body %>  
+  </div>
+  <div class="content-col-2">
+    <%= raw side_body %>  
+  </div>
+  
+  <% end %>
+  
 </div>

@@ -1,0 +1,25 @@
+pt-BR:
+  shared:
+    admin:
+      image_picker:
+        image: imagem
+  plugins:
+    studies:
+      title: Conteúdos
+  admin:
+    studies:
+      actions:
+        create_new: Adicionar Novo Conteúdo
+        reorder: Reordenar conteúdos
+        reorder_done: Fim da reordenação dos conteúdos
+      records:
+        title: Conteúdos
+        sorry_no_results: Descupe! Nenhum resultado foi encontrado.
+        no_items_yet: Não há Conteúdos ainda. Clique em "Adicionar Novo Conteúdo" para adicionar seu primeiro conteúdo
+      study:
+        view_live_html: Ver este conteúdo <br/><em>(abrir em uma nova janela)</em>
+        edit: Editar este conteúdo
+        delete: Apagar este conteúdo para sempre
+  studies:
+    show:
+      other: Outros conteúdos
