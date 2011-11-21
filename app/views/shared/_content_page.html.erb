@@ -10,18 +10,22 @@
   
 -%>
 
-<div class="content-page">
-  <h1><%= title %></h1>
+<div class="main">  <!--Main-->
+  <div class="back-right"> <!--Back-right-->
+    <div class="wrapper"> <!--Wrapper-->
   <% unless side_body %>
+    <h2><%= title %></h2>
     <%= raw body %>
   <% else %>
-  <div class="content-col-1">
+  <div class="col-1">
+    <h2><%= title %></h2>
     <%= raw body %>  
   </div>
-  <div class="content-col-2">
+  <div class="col-2">
     <%= raw side_body %>  
   </div>
   
   <% end %>
-  
-</div>
+    </div> <!--End Wrapper-->
+  </div> <!--End Back-right-->
+</div>  <!--End Main-->

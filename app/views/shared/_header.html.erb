@@ -1,13 +1,11 @@
-<div id="computer">
-  <img alt="" src="images/application/computer.png">
-</div>
-<%= link_to root_path, :id=>"logo" do %>
-  <h1><span><%=RefinerySetting.find_or_set(:site_name, "Arquiteturas de Computadores")%></span></h1>
-<% end %>
-<%#*<a id="logo"><h1><span>Arquiteturas de Computadores</span></h1></a>%>
-<!--
-<span id="logo"><h1><%= link_to RefinerySetting.find_or_set(:site_name, "Arquiteturas de Computadores"), root_path %></h1></span>
--->
+<div id="computer"><img alt="" src="images/application/computer.png"></div>
+
+<h1>
+	<%= link_to root_path, :id => "logo" do %>
+		<span>Arquiteturas de Computadores</span>
+	<%end%>
+</h1>
+
 <%= render(:partial => "/shared/menu", :locals => {
     :dom_id => 'menu',
     :css => 'menu',

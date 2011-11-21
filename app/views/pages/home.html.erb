@@ -1,55 +1,59 @@
 <div class="main">  <!--Main-->
-  <div class="wrapper"> <!--Wrapper-->
+  <div class="back-right"> <!--Back-right-->
+    <div class="wrapper"> <!--Wrapper-->
 
-    <div class="col-1">
+      <div class="col-1">
 
-      <% @page.children.each do |child| %>
-        <% if child.show_in_menu %>
-          <div class="item">
-            <h3><%= child.title %></h3>
-            <%= raw child.content_for :side_body %>
+        <% @page.children.each do |child| %>
+          <% if child.show_in_menu %>
+            <div class="item">
+              <h2><%= child.title %></h2>
+              <%= raw child.content_for :side_body %>
 
-            <% if not child.skip_to_first_child %>
-              <%= link_to "Leia mais", page_path(child), :class=>"", :title=>"" %>
-            <% end %>
-          </div>
-        <% end %>
-      <% end %>
-
-    </div>
-
-    <div class="col-2">
-
-      <div class="item">
-        <h2>Latest <span>News</span></h2>
-
-        <% if @noticias.empty? %>
-          <h3>Nenhuma notícia encontrada</h3>
-        <% else %>
-          <% @noticias.each do |noticia| %>
-            <li>
-              <div class="news_image">
-                <span></span>
-                <% if noticia.image.nil? %>
-                  <img alt="image" src="images/home/new1.png">
-                <% else %>
-                  <img alt="image" src="<%=noticia.image.url%>">
-                <% end %>
-              </div>
-              <div class="new">
-                <h3><%= truncate(noticia.title, :length => 20) %></h3>
-                <h4><%= noticia.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
-                <p><%= truncate(sanitize(noticia.text, :tags => ""), :length => 55) %></p>
-                <%= link_to "Leia mais", update_path(noticia), :class=>"button", :title=>"" %>
-              </div>
-            </li>
+              <% if not child.skip_to_first_child %>
+                <%= link_to "Leia mais", page_path(child), :class=>"", :title=>"" %>
+              <% end %>
+            </div>
           <% end %>
         <% end %>
+
       </div>
 
-      <div class="item">
-        <%= render :partial => "/shared/calendar" %>
-      </div>
 
+      <div class="col-2">
+        <div>
+          <div class="item">
+            <h2>Latest <span>News</span></h2>
+
+            <% if @noticias.empty? %>
+              <h3>Nenhuma notícia encontrada</h3>
+            <% else %>
+              <% @noticias.each do |noticia| %>
+                <li>
+                  <div class="news_image">
+                    <span></span>
+                    <% if noticia.image.nil? %>
+                      <img alt="image" src="images/home/new1.png">
+                    <% else %>
+                      <img alt="image" src="<%=noticia.image.url%>">
+                    <% end %>
+                  </div>
+                  <div class="new">
+                    <h3><%= truncate(noticia.title, :length => 20) %></h3>
+    <%#*<h4><%= noticia.created_at.strftime("%d/%m/%Y às %H:%M") </h4>%>
+                    <p><%= truncate(sanitize(noticia.text, :tags => ""), :length => 55) %></p>
+                    <%= link_to "Leia mais", update_path(noticia), :class=>"button", :title=>"" %>
+                  </div>
+                </li>
+              <% end %>
+            <% end %>
+          </div>
+
+          <div class="item">
+            <%= render :partial => "/shared/calendar" %>
+          </div>
+        </div> 
+      </div>
     </div> <!--End Wrapper-->
-  </div>  <!--End Main-->
+  </div>
+</div>  <!--End Main-->

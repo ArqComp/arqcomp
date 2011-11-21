@@ -1,48 +1,28 @@
 <% content_for :body_content_left do %>
-  <ul>
-    <% @updates.each do |update| %>
-      <li>
-        <div class="call">
-          <h2><%= update.title %> </h2>
-          <h4><%= update.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
-        </div>
-        <p class="clear"><%= truncate(sanitize(update.text, :tags=>""), :length => 190) %> </p>
-        
-        <%= link_to "Leia mais", update_path(update), :title => "" %>
-        <%= link_to "Editar", edit_admin_update_path(update), :title=>"" if user_signed_in? %>
-        <div class="clear"></div>
-      </li>
-    <% end %>
-    <%= will_paginate @updates %>
+	<ul id="page-new">
+      <% @updates.each do |update| %>
+
+          <li class="clear">
+              <div class="call">
+                  <h3><%= update.title %> </h3>
+                  <h4><%= update.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
+              </div>
+
+              <p class="clear"><%= truncate(sanitize(update.text, :tags=>""), :length => 190) %> </p>
+
+              <%= link_to "Leia mais", update_path(update), :title => "", :class=>"see-more" %>
+              <%= link_to "Editar", edit_admin_update_path(update), :title=>"", :class => "edit" if user_signed_in? %>
+          </li>
+      <% end %>
+
+      <%= will_paginate @updates %>
+
+      <%#*<a href="#" title="">1 2 3 ... 10</a>%>
   </ul>  
 <% end %>
 
 <% content_for :body_content_right do %>
-<div class="veja"> <!--Right-->
-<h2>Veja também</h2>
-<ul>
-  <li class="clear">                           
-    <a href="#" title="">
-      <img src="images/news/material.png" width="70" height="70" alt="" />
-      <h3>Conteúdo completo para você estudar</h3>
-    </a>
-  </li>
-  <li class="clear">                             
-    <a href="#" title="">
-      <img src="images/news/video-aula.png" width="70" height="70" alt="" />
-      <h3>Comunicação em tempo real através de video chat</h3>
-    </a>
-  </li>
-  <li class="clear">
-    <a href="#" title="">
-      <img src="images/news/you-tube.png" width="70" height="70" alt="" />
-      <h3>Videos sobre a Arquitetura de Computadores</h3>
-    </a>
-  </li>
-</ul>
-
 <%= render :partial => "/shared/calendar" %>
-</div>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
