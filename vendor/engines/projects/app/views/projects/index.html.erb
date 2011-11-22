@@ -2,17 +2,17 @@
   <ul id="projects">
     <% @projects.group_by(&:semester).sort.reverse.each do |semester, projects| %>
       <li>
-        <span><%= semester %></span>
-          <ul>
-            <% projects.each do |project| %>
-              <li>
-                <span class="folder"><%= project.title %></span>
-                <ul><li>
-                  <%=raw project.description %>
-                    </li></ul>
-              </li>
-              <% end %>
-          </ul>
+        <h3><%= semester %></h3>
+        <ul>
+          <% projects.each do |project| %>
+            <li>
+              <a class="project" id="<%= "project-#{project.id}" %>"><%= project.title %></a>
+              <div id="<%= "project-#{project.id}-content" %>" class="project-content">
+                <%=raw project.description %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
       </li>
 
     <% end %>

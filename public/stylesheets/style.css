@@ -326,6 +326,7 @@ img {
 }
 
 
+
 .col-unique .item{
     margin: 60px 0 0;	
 }
@@ -498,3 +499,12 @@ img {
     top: -2px;
 }
 /*End News*/
+
+
+#projects a{ 
+    float: none;
+}
+
+.project-content {
+    padding: 3px 30px;
+}
