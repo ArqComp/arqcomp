@@ -12,6 +12,9 @@
   #efefef - other month day header (gray)
   #2eac6a - hover (green)
 */
+#calendar {
+  margin: 0 0 20px 0;
+}
 
 /* Outer most container */
 .ec-calendar {
