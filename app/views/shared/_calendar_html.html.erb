@@ -1,0 +1,129 @@
+<div class="ec-calendar" <%="style=""width: #{options[:width]}px;""" if options[:width] %>>
+  <%  if options[:show_header] %>
+    <table class="ec-calendar-header" cellpadding="0" cellspacing="0">
+      <thead><tr>
+          <% if options[:previous_month_text] or options[:next_month_text] %>
+            <th colspan="2" class="ec-month-nav ec-previous-month"><%= raw options[:previous_month_text] %></th>
+            <% colspan = 3 %>
+          <% else %>
+            <% colspan = 7 %>
+          <% end %>
+          <th colspan="#{colspan}" class="ec-month-name"><%= raw options[:month_name_text]%></th>
+          <% if options[:next_month_text] %>
+            <th colspan="2" class="ec-month-nav ec-next-month"><%= raw options[:next_month_text]%></th>
+          <% end %>
+        </tr></thead></table>
+  <% end %>
+
+  <div class="ec-body" style="height: <%= height %>px;">
+    <table class="ec-day-names" style="height: <%= options[:day_names_height] %>px;" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <% day_names.each do |day_name| %>
+            <th class="ec-day-name" title="<%= day_name %>"><%= day_name %></th>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ec-rows" style="top: <%= options[:day_names_height] %>px; height: <%= height - options[:day_names_height]%>px;">
+
+
+      <% row_num = 0 %>
+      <% top = 0 %>
+      <% while(last_day_of_week <= last_day_of_cal) %>
+        <div class="ec-row" style="<%= "top: #{top}px; height: #{row_heights[row_num]}px;"%>">
+          <% top += row_heights[row_num] %>
+          <table class="ec-row-bg" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+                <% first_day_of_week.upto(first_day_of_week+6) do |day| %>
+                  <% today_class = (day == Date.today) ? "ec-today-bg" : "" %>
+                  <% other_month_class = (day < first) || (day > last) ? 'ec-other-month-bg' : '' %>
+                  <td class="<%= "ec-day-bg #{today_class} #{other_month_class}" %>">&nbsp;</td>
+                <% end %> 
+              </tr></tbody>
+          </table>
+          <table class="ec-row-table" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <% first_day_of_week.upto(last_day_of_week) do |day| %>
+                  <% list = ["ec-day-header"] 
+                  list << "ec-today-header" if options[:show_today] and (day == Date.today)
+                  list << "ec-other-month-header" if (day < first) || (day > last)
+                  list << "ec-weekend-day-header" if weekend?(day)
+                %>
+                  <td class="<%=raw list.join(' ')%>" style="height: <%= options[:day_nums_height] %>px;"> 
+                    <% if options[:link_to_day_action] %>
+                      <%= day_link(day.day, day, options[:link_to_day_action]) %>
+                    <% else %>
+                      <%= day.day %>
+                    <% end %>
+                  </td>
+                <% end %>
+              </tr>
+              <% options[:event_strips].each do |strip| %>
+                <tr>
+                  <% strip[row_num*7, 7].each_with_index do |event, index| %>
+                    <% day = first_day_of_week + index %>
+                    <% if event %>
+                      <% dates = event.clip_range(first_day_of_week, last_day_of_week) %>
+                      <% if dates[0] == day.to_date %>
+                        <% no_bg = no_event_bg?(event, options) %>
+                        <% class_name = event.class.name.tableize.singularize %>
+                        <td class="ec-event-cell" colspan="<%=(dates[1]-dates[0]).to_i + 1%>" style="padding-top: <%= options[:event_margin] %>px;">
+                          <% 
+                          id = %(id="ec-#{class_name}-#{event.id}")
+                          list = ["ec-event"]
+                          list << "ec-#{class_name}" if class_name != "event"
+                          list << (no_bg ? "ec-event-no-bg" : "ec-event-bg")
+                          classes = %(class="#{list.join(' ')}")
+                          list = [(no_bg ? "color: #{event.color};" : "background-color: #{event.color};")]
+                          list << "padding-top: #{options[:event_padding_top]}px;"
+                          list << "height: #{options[:event_height] - options[:event_padding_top]}px;"
+                          estilos = %(style="#{list.join(' ')}")
+                          if options[:use_javascript]
+                            extra = %(data-event-id="#{event.id}" data-event-class="#{class_name}" data-color="#{event.color}" )
+                          else
+                            extra = ""
+                          end
+                        %>
+                          <div <%=raw [id, classes, estilos, extra].join(' ')%>>
+                            <% if event.start_at.to_date < dates[0] %>
+                              <div class="ec-left-arrow"></div>
+                            <% end %>
+                            <% if event.end_at.to_date > dates[1] %>
+                              <div class="ec-right-arrow"></div>
+                            <% end %>
+                            <% if no_bg %>
+                              <div class="ec-bullet" style="background-color: <%=event.color%>;"></div>
+                              <style type="text/css"><%=".ec-#{class_name}-#{event.id}"%> a { color: <%=event.color%>; }</style>
+                            <% end %>
+                            <% if block_given %>
+                              <%= raw block.call({:event => event, :day => day.to_date, :options => options}) %>
+                            <% else %>
+                              <a href="<%="/#{class_name.pluralize}/#{event.id}"%>" title="<%=h(event.name)%>"><%=h(event.name)%></a>
+                            <% end %>
+                          </div>
+                        </td>
+                      <% end %>
+                    <% else %>
+                      <td class="ec-event-cell ec-no-event-cell" style="padding-top: <%=options[:event_margin]%>px;">
+                        <div class="ec-event" style="padding-top: <%= options[:event_padding_top]%>px; height: <%=options[:event_height] - options[:event_padding_top]%>px;">
+                          &nbsp;
+                        </div>
+                      </td>
+                    <% end %>
+                  <% end %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <% row_num += 1
+        first_day_of_week += 7
+        last_day_of_week += 7 
+      %>
+      <% end %>
+    </div>
+  </div>
+</div>
