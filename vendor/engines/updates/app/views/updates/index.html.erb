@@ -1,28 +1,30 @@
 <% content_for :body_content_left do %>
-	<ul id="page-new">
-      <% @updates.each do |update| %>
+  <ul id="page-new">
+    <% @updates.each do |update| %>
 
-          <li class="clear">
-              <div class="call">
-                  <h3><%= update.title %> </h3>
-                  <h4><%= update.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
-              </div>
+      <li class="clear">
+        <div class="call">
+          <h3><%= update.title %> </h3>
+          <h4><%= update.created_at.strftime("%d/%m/%Y às %H:%M") %></h4>
+        </div>
 
-              <p class="clear"><%= truncate(sanitize(update.text, :tags=>""), :length => 190) %> </p>
+        <p class="clear"><%= truncate(sanitize(update.text, :tags=>""), :length => 190) %> </p>
 
-              <%= link_to "Leia mais", update_path(update), :title => "", :class=>"see-more" %>
-              <%= link_to "Editar", edit_admin_update_path(update), :title=>"", :class => "edit" if user_signed_in? %>
-          </li>
-      <% end %>
+        <%= link_to "Leia mais", update_path(update), :title => "", :class=>"see-more" %>
+        <%= link_to "Editar", edit_admin_update_path(update), :title=>"", :class => "edit" if user_signed_in? %>
+      </li>
+    <% end %>
 
-      <%= will_paginate @updates %>
+    <%= will_paginate @updates %>
 
-      <%#*<a href="#" title="">1 2 3 ... 10</a>%>
+  <%#*<a href="#" title="">1 2 3 ... 10</a>%>
   </ul>  
 <% end %>
 
 <% content_for :body_content_right do %>
-<%= render :partial => "/shared/calendar" %>
+  <div class="item">
+    <%= render :partial => "/shared/calendar" %>
+  </div>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>

@@ -67,10 +67,10 @@
                     <% day = first_day_of_week + index %>
                     <% if event %>
                       <% dates = event.clip_range(first_day_of_week, last_day_of_week) %>
-                      <% if dates[0] == day.to_date %>
+                      <% if dates[0] <= day.to_date %>
                         <% no_bg = no_event_bg?(event, options) %>
                         <% class_name = event.class.name.tableize.singularize %>
-                        <td class="ec-event-cell" colspan="<%=(dates[1]-dates[0]).to_i + 1%>" style="padding-top: <%= options[:event_margin] %>px;">
+                        <td class="ec-event-cell" style="padding-top: <%= options[:event_margin] %>px;">
                           <% 
                           id = %(id="ec-#{class_name}-#{event.id}")
                           list = ["ec-event"]
@@ -88,21 +88,16 @@
                           end
                         %>
                           <div <%=raw [id, classes, estilos, extra].join(' ')%>>
-                            <% if event.start_at.to_date < dates[0] %>
-                              <div class="ec-left-arrow"></div>
-                            <% end %>
-                            <% if event.end_at.to_date > dates[1] %>
-                              <div class="ec-right-arrow"></div>
-                            <% end %>
                             <% if no_bg %>
                               <div class="ec-bullet" style="background-color: <%=event.color%>;"></div>
                               <style type="text/css"><%=".ec-#{class_name}-#{event.id}"%> a { color: <%=event.color%>; }</style>
                             <% end %>
-                            <% if block_given %>
-                              <%= raw block.call({:event => event, :day => day.to_date, :options => options}) %>
-                            <% else %>
-                              <a href="<%="/#{class_name.pluralize}/#{event.id}"%>" title="<%=h(event.name)%>"><%=h(event.name)%></a>
-                            <% end %>
+                              <%= link_to "", day_path(:day => day.day, :month=> day.month, :year=> day.year) %>
+                            <!--<%# if block_given %>
+                              <%#= raw block.call({:event => event, :day => day.to_date, :options => options}) %>
+                            <%# else %>
+                              <%#*<a href="<%="/#{class_name.pluralize}/#{event.id}"%>" title="<%=h(event.name)%>"><%=h(event.name)%></a>%>
+                            <%# end %>-->
                           </div>
                         </td>
                       <% end %>

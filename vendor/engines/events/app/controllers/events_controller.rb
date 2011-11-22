@@ -11,7 +11,9 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @date = "#{params[:day]}/#{params[:month]}/#{params[:year]}".to_datetime
+    
+    @day_events = Event.find(:all, :conditions => ["start_at < ? AND end_at >= ?", @date + 1.day, @date])
 
     # you can use meta fields from your model instead (e.g. browser_title)
     # by swapping @page for @event in the line below:

@@ -110,6 +110,7 @@ module ApplicationHelper
       options[:event_strips].each_with_index do |strip, strip_num|
         num_events = strip_num + 1 unless strip[index-1].blank?
       end
+      num_events = 1
       # get the most event rows for this week
       num_event_rows = [num_event_rows, num_events].max
       # if we reached the end of the week, calculate this row's height

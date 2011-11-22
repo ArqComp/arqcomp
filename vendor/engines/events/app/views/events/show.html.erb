@@ -1,45 +1,29 @@
 <% content_for :body_content_title do %>
-  <%= @event.name %>
+  <%= @date.strftime("%d/%m/%Y") %>
 <% end %>
 
 <% content_for :body_content_left do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @event.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Start At</h1>
-    <p>
-      <%=raw @event.start_at %>
-    </p>
-  </section>
-  <section>
-    <h1>End At</h1>
-    <p>
-      <%=raw @event.end_at %>
-    </p>
-  </section>
-  <section>
-    <h1>All Day</h1>
-    <p>
-      <%=raw @event.all_day %>
-    </p>
-  </section>
+  <ul id="page-new">
+    <% @day_events.each do |event| %>
+      <li class="clear">
+        <div class="call">
+          <h3><%= event.name %> </h3>
+          <%#*<h4>Evento</h4>%>
+        </div>
+        <p class="clear">
+          Inicio: <%= event.start_at.strftime("%d/%m/%Y às %H:%M") %><br/>
+          Fim: <%= event.end_at.strftime("%d/%m/%Y às %H:%M") %><br/>
+          <%= "O dia todo" if event.all_day %>
+        </p>
+        <%= link_to "Editar", edit_admin_event_path(event), :title=>"", :class => "edit" if user_signed_in? %>
+      </li>
+
+    <% end %>
+  </ul>
 <% end %>
 
 <% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="events">
-      <% @events.each do |event| %>
-        <li>
-          <%= link_to event.name, event_path(event) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
+  <%= render :partial => "/shared/calendar" %>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
