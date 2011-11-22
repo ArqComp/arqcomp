@@ -1,11 +1,9 @@
 .bundle
 log/*.log
-tmp/
 # Rails
 .bundle
 *.log
-tmp
-tmp/**/*
+
 
 # Documentation
 doc/api
