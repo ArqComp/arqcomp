@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    study_categories:
+      title: Study Categories
+  admin:
+    study_categories:
+      actions:
+        create_new: Maak een nieuwe Study Category
+        reorder: Wijzig de volgorde van de Study Categories
+        reorder_done: Klaar met het wijzingen van de volgorde van de Study Categories
+      records:
+        title: Study Categories
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Study Categories. Druk op 'Maak een nieuwe Study Category' om de eerste aan te maken.
+      study_category:
+        view_live_html: Bekijk deze study category op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze study category
+        delete: Verwijder deze study category voor eeuwig
+  study_categories:
+    show:
+      other: Andere Study Categories

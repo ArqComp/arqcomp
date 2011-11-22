@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    study_categories:
+      title: Study Categories
+  admin:
+    study_categories:
+      actions:
+        create_new: Lag en ny Study Category
+        reorder: Endre rekkefølgen på Study Categories
+        reorder_done: Ferdig å endre rekkefølgen Study Categories
+      records:
+        title: Study Categories
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Study Categories enda. Klikk på "Lag en ny Study Category" for å legge til din første study category.
+      study_category:
+        view_live_html: Vis hvordan denne study category ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne study category
+        delete: Fjern denne study category permanent
+  study_categories:
+    show:
+      other: Andre Study Categories

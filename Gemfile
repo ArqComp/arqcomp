@@ -66,3 +66,5 @@ gem 'ruby-debug19'
 gem 'will_paginate'
 #gem "tablebuilder", :git => "https://github.com/mbreit/tablebuilder"
 gem 'refinerycms-events', '1.0', :path => 'vendor/engines'
+
+gem 'refinerycms-study_categories', '1.0', :path => 'vendor/engines'

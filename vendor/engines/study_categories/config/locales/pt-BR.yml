@@ -1,0 +1,25 @@
+pt-BR:
+  shared:
+    admin:
+      image_picker:
+        image: imagem
+  plugins:
+    study_categories:
+      title: Categorias de Conteúdo
+  admin:
+    study_categories:
+      actions:
+        create_new: Adicionar Nova Categoria
+        reorder: Reorddenar categorias
+        reorder_done: Fim da reordenação das categorias
+      records:
+        title: Categorias de Conteúdo
+        sorry_no_results: Descupe! Nenhum resultado foi encontrado.
+        no_items_yet: Não há Categorias ainda. Clique em "Adicionar Nova Categoria" para adicionar sua primeira categoria.
+      study_category:
+        view_live_html: Ver esta categoria <br/><em>(abrir em uma nova janela)</em>
+        edit: Editar esta categoria
+        delete: Apagar esta categoria para sempre
+  study_categories:
+    show:
+      other: Outras categorias

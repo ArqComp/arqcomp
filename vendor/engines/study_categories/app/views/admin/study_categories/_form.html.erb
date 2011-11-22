@@ -1,0 +1,29 @@
+<%= form_for [:admin, @study_category] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+          :object => @study_category,
+          :include_object_name => true
+        } %>
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+          :f => f,
+          :field => :image_id,
+          :image => @study_category.image,
+          :toggle_image_display => false
+        } %>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('delete', :scope => 'admin.study_categories.study_category'),
+                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @study_category.name)
+              } %>
+<% end -%>

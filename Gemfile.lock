@@ -4,6 +4,7 @@ PATH
     refinerycms-events (1.0)
     refinerycms-projects (1.0)
     refinerycms-studies (1.0)
+    refinerycms-study_categories (1.0)
     refinerycms-updates (1.0)
 
 GEM
@@ -186,6 +187,7 @@ DEPENDENCIES
   refinerycms-i18n (~> 1.0.0)
   refinerycms-projects (= 1.0)!
   refinerycms-studies (= 1.0)!
+  refinerycms-study_categories (= 1.0)!
   refinerycms-updates (= 1.0)!
   ruby-debug19
   sqlite3

@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @study_category.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <%#*<div>%>
+    <%#*<p>%>
+      <%#= image_fu @study_category.image, nil %>
+    <%#*</p>%>
+  <%#*</div>%>
+  <ul id="studies">
+    <% @study_category.studies.each do |study| %>
+      <li>
+        <%= link_to study.title, study_path(study) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <div>
+    <h2><%= t('.other') %></h2>
+    <ul id="study_categories">
+      <% @study_categories.each do |study_category| %>
+        <li>
+          <%= link_to study_category.name, study_category_path(study_category) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

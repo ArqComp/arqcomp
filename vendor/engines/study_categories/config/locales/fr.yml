@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    study_categories:
+      title: Study Categories
+  admin:
+    study_categories:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Study Category
+        reorder: Réordonner les Study Categories
+        reorder_done: Fin de réordonnancement des Study Categories
+      records:
+        title: Study Categories
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Study Category. Cliquer sur "Créer un(e) nouve(au/l/lle) Study Category" pour créer votre premi(er/ère) study category.'
+      study_category:
+        view_live_html: Voir ce(t/tte) study category <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) study category
+        delete: Supprimer définitivement ce(t/tte) study category
+  study_categories:
+    show:
+      other: Autres Study Categories

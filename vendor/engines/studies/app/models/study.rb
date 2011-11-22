@@ -5,4 +5,5 @@ class Study < ActiveRecord::Base
   validates :title, :presence => true, :uniqueness => true
   
   belongs_to :link, :class_name => 'Resource'
+  belongs_to :study_category
 end

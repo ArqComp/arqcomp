@@ -8,6 +8,11 @@
     <%= f.label :title -%>
     <%= f.text_field :title, :class => 'larger widest'  -%>
   </div>
+
+  <div class='field'>
+    <%= f.label :study_category_id -%>
+    <%= f.select :study_category_id, @categorias, :class => 'larger widest'  -%>
+  </div>
   
   <div class='field'>
     <%= f.label :link -%>

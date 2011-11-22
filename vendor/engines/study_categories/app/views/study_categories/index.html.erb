@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="study_categories">
+    <% @study_categories.each do |study_category| %>
+      <li>
+        <%= link_to study_category.name, study_category_path(study_category) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    study_categories:
+      title: Study Categories
+  admin:
+    study_categories:
+      actions:
+        create_new: CREATE NEW Study Category
+        reorder: REORDR Study Categories
+        reorder_done: DUN REORDERIN Study Categories
+      records:
+        title: Study Categories
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Study Categories YET. CLICK "CREATE NEW Study Category" 2 ADD UR FURST study category.
+      study_category:
+        view_live_html: VIEW DIS study category LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS study category
+        delete: REMOOV DIS study category FOREVR
+  study_categories:
+    show:
+      other: OTHR Study Categories

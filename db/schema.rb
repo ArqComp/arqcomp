@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111120222402) do
+ActiveRecord::Schema.define(:version => 20111122042903) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -174,9 +174,20 @@ ActiveRecord::Schema.define(:version => 20111120222402) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "study_category_id"
   end
 
-  add_index "studies", ["id"], :name => "index_studies_on_id"
+  add_index "studies", ["study_category_id"], :name => "index_studies_on_study_category_id"
+
+  create_table "study_categories", :force => true do |t|
+    t.string   "name"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "study_categories", ["id"], :name => "index_study_categories_on_id"
 
   create_table "updates", :force => true do |t|
     t.string   "title"
@@ -186,8 +197,6 @@ ActiveRecord::Schema.define(:version => 20111120222402) do
     t.datetime "updated_at"
     t.integer  "image_id"
   end
-
-  add_index "updates", ["id"], :name => "index_updates_on_id"
 
   create_table "user_plugins", :force => true do |t|
     t.integer "user_id"

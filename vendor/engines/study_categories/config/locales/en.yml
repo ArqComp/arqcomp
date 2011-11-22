@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    study_categories:
+      title: Study Categories
+  admin:
+    study_categories:
+      actions:
+        create_new: Add New Study Category
+        reorder: Reorder Study Categories
+        reorder_done: Done Reordering Study Categories
+      records:
+        title: Study Categories
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Study Categories yet. Click "Add New Study Category" to add your first study category.
+      study_category:
+        view_live_html: View this study category live <br/><em>(opens in a new window)</em>
+        edit: Edit this study category
+        delete: Remove this study category forever
+  study_categories:
+    show:
+      other: Other Study Categories
