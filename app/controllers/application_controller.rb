@@ -1,10 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  before_filter :ler_noticias, :calendario
+  before_filter :ler_noticias, :calendario, :ler_categorias_de_conteudo
   
   def ler_noticias
     @noticias = Update.order('created_at DESC').limit 3
+  end
+  
+  def ler_categorias_de_conteudo
+    @categorias_de_conteudo = StudyCategory.all
   end
   
   def calendario

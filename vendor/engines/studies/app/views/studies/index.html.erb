@@ -1,11 +1,1 @@
-<% content_for :body_content_left do %>
-  <ul id="studies">
-    <% @studies.each do |study| %>
-      <li>
-        <%= link_to study.title, study_path(study) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render :partial => "/shared/content_page" %>
+<%= render :partial => "/shared/studies", :locals => {:studies => @studies} %>

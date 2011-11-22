@@ -10,8 +10,9 @@
               <%= raw child.content_for :side_body %>
 
               <% if not child.skip_to_first_child %>
-                <%= link_to "Leia mais", page_path(child), :class=>"", :title=>"" %>
+                <%= link_to "Leia mais", page_path(child), :class=>"see-more", :title=>"" %>
               <% end %>
+              <%= link_to "Editar", edit_admin_page_path(child), :title=>"", :class => "edit" if user_signed_in? %>
             </div>
           <% end %>
         <% end %>
