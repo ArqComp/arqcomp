@@ -9,6 +9,7 @@
               <a class="project" id="<%= "project-#{project.id}" %>"><%= project.title %></a>
               <div id="<%= "project-#{project.id}-content" %>" class="project-content">
                 <%=raw project.description %>
+              <%= link_to "Editar", edit_admin_project_path(project), :title=>"", :class => "edit" if user_signed_in? %>
               </div>
             </li>
           <% end %>
@@ -18,6 +19,10 @@
     <% end %>
     <%= raw "<div>" %>
   </ul>
+  <% if @project %>
+    <div class="unfold" style="display: none;" id="<%=  @project.id %>"/>
+  <% end %>
+
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>

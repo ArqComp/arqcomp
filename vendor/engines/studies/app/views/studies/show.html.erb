@@ -13,10 +13,12 @@
   <aside>
     <h2><%= t('.other') %></h2>
     <ul id="studies">
-      <% @studies.each do |study| %>
+      <% @study.study_category.studies.each do |study| %>
+        <% if study != @study %>
         <li>
           <%= link_to study.title, study_path(study) %>
         </li>
+        <% end %>
       <% end %>
     </ul>
   </aside>

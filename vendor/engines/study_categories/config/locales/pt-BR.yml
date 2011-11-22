@@ -1,4 +1,11 @@
 pt-BR:
+  activerecord:
+    models:
+      study_categories: Categorias de Conteúdo
+    attributes:
+      study_categories:
+        name: Nome
+        image: Imagem
   shared:
     admin:
       image_picker:
@@ -10,8 +17,9 @@ pt-BR:
     study_categories:
       actions:
         create_new: Adicionar Nova Categoria
-        reorder: Reorddenar categorias
+        reorder: Reordenar categorias
         reorder_done: Fim da reordenação das categorias
+        delete: 'Você realmente deseja deletar a categoria "%{title}"? Isto deletará todos os conteúdos desta categoria'
       records:
         title: Categorias de Conteúdo
         sorry_no_results: Descupe! Nenhum resultado foi encontrado.

@@ -5,17 +5,17 @@
         } %>
   
   <div class='field'>
-    <%= f.label :title -%>
+    <%= f.label :title, t(:'activerecord.attributes.studies.title') -%>
     <%= f.text_field :title, :class => 'larger widest'  -%>
   </div>
 
   <div class='field'>
-    <%= f.label :study_category_id -%>
+    <%= f.label :study_category_id, t(:'activerecord.attributes.studies.study_category') -%>
     <%= f.select :study_category_id, @categorias, :class => 'larger widest'  -%>
   </div>
   
   <div class='field'>
-    <%= f.label :link -%>
+    <%= f.label :link, t(:'activerecord.attributes.studies.link') -%>
     <%= render :partial => "/shared/admin/resource_picker", :locals => {
           :f => f,
           :field => :link_id,
@@ -28,7 +28,7 @@
       <ul id='page_parts'>
         <% [:text].each_with_index do |part, part_index| %>
           <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
-            <%= link_to part.to_s.titleize, "##{part}" %>
+            <%= link_to t(part.to_s, :scope=>:'activerecord.attributes.studies'), "##{part}" %>
           </li>
         <% end %>
       </ul>

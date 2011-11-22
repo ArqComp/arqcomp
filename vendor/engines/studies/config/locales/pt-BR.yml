@@ -1,4 +1,13 @@
 pt-BR:
+  activerecord:
+    models:
+      studies: Categorias de Conteúdo
+    attributes:
+      studies:
+        title: Título
+        study_category: Categoria
+        link: Link
+        text: Texto
   shared:
     admin:
       image_picker:

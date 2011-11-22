@@ -1,4 +1,12 @@
 pt-BR:
+  activerecord:
+    models:
+      projects: Projetos
+    attributes:
+      projects:
+        title: Título
+        semester: Período
+        description: Descrição
   shared:
     admin:
       image_picker:

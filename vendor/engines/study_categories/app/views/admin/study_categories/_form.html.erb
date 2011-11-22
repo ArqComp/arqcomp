@@ -5,12 +5,12 @@
         } %>
   
   <div class='field'>
-    <%= f.label :name -%>
+    <%= f.label :name, t(:'activerecord.attributes.study_categories.name') -%>
     <%= f.text_field :name, :class => 'larger widest'  -%>
   </div>
   
   <div class='field'>
-    <%= f.label :image -%>
+    <%= f.label :image, t(:'activerecord.attributes.study_categories.image') -%>
     <%= render :partial => "/shared/admin/image_picker", :locals => {
           :f => f,
           :field => :image_id,

@@ -5,12 +5,12 @@
         } %>
   
   <div class='field'>
-    <%= f.label :title -%>
+    <%= f.label :title, t(:'activerecord.attributes.projects.title') -%>
     <%= f.text_field :title, :class => 'larger widest'  -%>
   </div>
 
   <div class='field'>
-    <%= f.label :semester -%>
+    <%= f.label :semester, t(:'activerecord.attributes.projects.semester') -%>
     <%= f.text_field :semester, :class => 'larger widest'  -%>
   </div>
   
@@ -19,7 +19,7 @@
       <ul id='page_parts'>
         <% [:description].each_with_index do |part, part_index| %>
           <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
-            <%= link_to part.to_s.titleize, "##{part}" %>
+            <%= link_to t(part.to_s, :scope=>:'activerecord.attributes.projects'), "##{part}" %>
           </li>
         <% end %>
       </ul>

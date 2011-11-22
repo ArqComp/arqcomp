@@ -12,7 +12,7 @@
     <%= link_to refinery_icon_tag("delete.png"), admin_study_category_path(study_category),
         :class => "cancel confirm-delete",
         :title => t('.delete'),
-        :confirm => t('message', :scope => 'shared.admin.delete', :title => study_category.name),
+        :confirm => t('delete', :scope => 'admin.study_categories.actions', :title => study_category.name),
         :method => :delete %>
   </span>
 </li>
