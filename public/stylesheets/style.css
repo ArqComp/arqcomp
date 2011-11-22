@@ -295,9 +295,41 @@ img {
 }
 
 /*Cols*/
-.col-1, .col-2{
+.col-1, .col-2, .col-unique{
     float: left;	
 }
+
+.col-unique{
+    margin: 0 60px 0 0;
+    padding-bottom: 33px;
+    width: 918px;
+}
+
+.col-unique h2{
+    border-bottom: 1px dashed #333;
+    font-size: 1.9em;
+    font-weight: normal;
+    font-family: 'Varela', sans-serif;
+    letter-spacing: -2px;
+    line-height: 1.2em;
+    margin-bottom: 12px;	
+}
+
+.col-unique h3{
+/*    border-bottom: 1px dashed #333;*/
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: 'Varela', sans-serif;
+    letter-spacing: -2px;
+    line-height: 1.2em;
+    margin-bottom: 12px;	
+}
+
+
+.col-unique .item{
+    margin: 60px 0 0;	
+}
+
 
 .col-1{
     margin: 0 60px 0 0;

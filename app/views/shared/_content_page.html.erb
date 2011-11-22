@@ -1,31 +1,33 @@
 <%
-  title = yield(:body_content_title)
-  title = @page.title if title.empty?
+title = yield(:body_content_title)
+title = @page.title if title.empty?
 
-  body = yield(:body_content_left)
-  body = @page.content_for :body if body.empty?
-  
-  side_body = yield(:body_content_right)
-  side_body = @page.content_for :side_body if side_body .empty?
-  
+body = yield(:body_content_left)
+body = @page.content_for :body if body.empty?
+
+side_body = yield(:body_content_right)
+side_body = @page.content_for :side_body if side_body.empty?
+side_body = nil if side_body.empty? 
 -%>
 
 <div class="main">  <!--Main-->
   <div class="back-right"> <!--Back-right-->
     <div class="wrapper"> <!--Wrapper-->
-  <% unless side_body %>
-    <h2><%= title %></h2>
-    <%= raw body %>
-  <% else %>
-  <div class="col-1">
-    <h2><%= title %></h2>
-    <%= raw body %>  
-  </div>
-  <div class="col-2">
-    <%= raw side_body %>  
-  </div>
-  
-  <% end %>
+      <% unless side_body %>
+        <div class="col-unique">
+          <h2><%= title %></h2>
+          <%= raw body %>
+        </div>
+      <% else %>
+        <div class="col-1">
+          <h2><%= title %></h2>
+          <%= raw body %>  
+        </div>
+        <div class="col-2">
+          <%= raw side_body %>  
+        </div>
+
+      <% end %>
     </div> <!--End Wrapper-->
   </div> <!--End Back-right-->
 </div>  <!--End Main-->

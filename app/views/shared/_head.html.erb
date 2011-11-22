@@ -19,7 +19,10 @@
   <%= render :partial => '/shared/google_analytics' unless local_request? %>
   
   <%= stylesheet_link_tag "event_calendar" %>
+  <%= stylesheet_link_tag "jquery.treeview" %>
 
   <%= javascript_include_tag 'modernizr-min' %>
-  <%= javascript_include_tag 'script' %>
+  <%= javascript_include_tag 'jquery-1.6.2.min' %>
+  <%= javascript_include_tag 'jquery.treeview' %>
+  <%= javascript_include_tag 'application' %>
 </head>

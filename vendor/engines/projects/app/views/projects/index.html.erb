@@ -1,10 +1,22 @@
 <% content_for :body_content_left do %>
   <ul id="projects">
-    <% @projects.each do |project| %>
+    <% @projects.group_by(&:semester).sort.reverse.each do |semester, projects| %>
       <li>
-        <%= link_to project.title, project_path(project) %>
+        <span><%= semester %></span>
+          <ul>
+            <% projects.each do |project| %>
+              <li>
+                <span class="folder"><%= project.title %></span>
+                <ul><li>
+                  <%=raw project.description %>
+                    </li></ul>
+              </li>
+              <% end %>
+          </ul>
       </li>
+
     <% end %>
+    <%= raw "<div>" %>
   </ul>
 <% end %>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111122042903) do
+ActiveRecord::Schema.define(:version => 20111122173914) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(:version => 20111122042903) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "semester"
   end
 
   add_index "projects", ["id"], :name => "index_projects_on_id"
