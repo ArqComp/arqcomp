@@ -1,44 +1,44 @@
-px;@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 
-*{
-	margin: 0;
-	padding: 0;
-}
+/**{
+    margin: 0;
+    padding: 0;
+}*/
 
 body{
-	background: #2f373a;
-	border-top: 10px solid #0C0E0E;
-	color: #4E4E4E;
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: medium;
-	line-height: 1em;
-	min-width: 920px;
+    background: #2f373a;
+    border-top: 10px solid #0C0E0E;
+    color: #4E4E4E;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: medium;
+    line-height: 1em;
+    min-width: 920px;
 }
 
 .wrapper{
-	overflow: hidden;
+    overflow: hidden;
     width: 100%;
 }
 
 a{
-	display: block;
-	text-decoration:none;	
+    display: block;
+    text-decoration:none;	
 }
 
 p{
-	font-size: 0.9em;
-	line-height: 1.43em;
-	margin: 0;
+    font-size: 0.9em;
+    line-height: 1.43em;
+    margin: 0;
     word-spacing: 1px;	
 }
 
 ul{
-	padding: 0;	
+    padding: 0;	
 }
 
 li{
-	list-style:none;
+    list-style:none;
 }
 
 img {
@@ -48,23 +48,23 @@ img {
 }
 
 .clear{
-	clear: both;	
+    clear: both;	
 }
 
 /*Application*/
 #page-top{
-	background: url("../images/application/page-top.gif") repeat-x scroll left top #FFFFFF;
-	position: relative;
+    background: url("../images/application/page-top.gif") repeat-x scroll left top #FFFFFF;
+    position: relative;
     top: -21px;
 }
 
 #page-bottom{
-	background: url("../images/application/page-bottom2.gif") repeat-x scroll left bottom transparent;
+    background: url("../images/application/page-bottom2.gif") repeat-x scroll left bottom transparent;
 }
 
 #page_container{
-	background: url("../images/application/body-bg.jpg") no-repeat scroll center top transparent;
-	position: relative;
+    background: url("../images/application/body-bg.jpg") no-repeat scroll center top transparent;
+    position: relative;
     top: 1px;
 }
 
@@ -75,7 +75,7 @@ img {
 }
 
 .back-right{
-	background: url("../images/application/back-right.jpg") repeat-y scroll 605px 0 transparent;
+    background: url("../images/application/back-right.jpg") repeat-y scroll 605px 0 transparent;
 }
 
 #content {
@@ -93,54 +93,54 @@ img {
 }
 
 #computer{
-	position: absolute;
+    position: absolute;
     right: 35px;
     top: 95px;
 }
 
 #logo{
-	color: #20B7C9;
-	display: block;	
-	font-weight: lighter;
-	height: 117px;
+    color: #20B7C9;
+    display: block;	
+    font-weight: lighter;
+    height: 117px;
     overflow: hidden;
     width: 100%;
 }
 
 #logo{
-	background: url("../images/application/logo.png") no-repeat;
-	height: 35px;
+    background: url("../images/application/logo.png") no-repeat;
+    height: 35px;
     position: relative;
     top: 25px;
     width: 450px;
 }
 
 #logo span{
-	display: none;	
+    display: none;	
 }
 
 #nav{
-	margin: 0;
+    margin: 0;
     overflow: hidden;
     position: relative;
-	top: 46px;
+    top: 46px;
     width: 100%;
     z-index: 2;
 }
 
 #nav li{
-	float: left;
-	height: 64px;
+    float: left;
+    height: 64px;
     margin-right: 4px;
     text-transform: uppercase;	
 }
 
 #nav a{
-	background: #1E2325;
+    background: #1E2325;
     border-radius: 20px 20px 0 0;
     color: #FFFFFF;
     display: block;
-	font-size: 0.9em;
+    font-size: 0.9em;
     padding: 30px 15px;
     text-align: center;
     text-decoration: none;
@@ -150,54 +150,54 @@ img {
     background: #006c81;
 }
 
-	/*item-1*/
-	#nav #item-1 a {width:59px;background:url(../images/application/m1.png)}
-	#nav #item-1 a:hover,
-	#nav #item-1 a.current {background:url(../images/application/m1-act.png)}
-	/*item-2*/
-	#nav #item-2 a {width:65px;background:url(../images/application/m2.png)}
-	#nav #item-2 a:hover,
-	#nav #item-2 a.current {background:url(../images/application/m2-act.png)}
-	/*item-3*/
-	#nav #item-3 a {width:86px;background:url(../images/application/m3.png)}
-	#nav #item-3 a:hover,
-	#nav #item-3 a.current {background:url(../images/application/m3-act.png)}
-	/*item-4*/
-	#nav #item-4 a {width:84px;background:url(../images/application/m4.png)}
-	#nav #item-4 a:hover,
-	#nav #item-4 a.current {background:url(../images/application/m4-act.png)}
-	/*item-5*/
-	#nav #item-5 a {width:92px;background:url(../images/application/m5.png)}
-	#nav #item-5 a:hover,
-	#nav #item-5 a.current {background:url(../images/application/m5-act.png)}
-	/*item-6*/
-	#nav #item-6 a {width:74px;background:url(../images/application/m6.png)}
-	#nav #item-6 a:hover, 
-	#nav #item-6 a.current {background:url(../images/application/m6-act.png)}
+/*item-1*/
+#nav #item-1 a {width:59px;background:url(../images/application/m1.png)}
+#nav #item-1 a:hover,
+#nav #item-1 a.current {background:url(../images/application/m1-act.png)}
+/*item-2*/
+#nav #item-2 a {width:65px;background:url(../images/application/m2.png)}
+#nav #item-2 a:hover,
+#nav #item-2 a.current {background:url(../images/application/m2-act.png)}
+/*item-3*/
+#nav #item-3 a {width:86px;background:url(../images/application/m3.png)}
+#nav #item-3 a:hover,
+#nav #item-3 a.current {background:url(../images/application/m3-act.png)}
+/*item-4*/
+#nav #item-4 a {width:84px;background:url(../images/application/m4.png)}
+#nav #item-4 a:hover,
+#nav #item-4 a.current {background:url(../images/application/m4-act.png)}
+/*item-5*/
+#nav #item-5 a {width:92px;background:url(../images/application/m5.png)}
+#nav #item-5 a:hover,
+#nav #item-5 a.current {background:url(../images/application/m5-act.png)}
+/*item-6*/
+#nav #item-6 a {width:74px;background:url(../images/application/m6.png)}
+#nav #item-6 a:hover, 
+#nav #item-6 a.current {background:url(../images/application/m6-act.png)}
 
 .page-call{
-	left: 70px;
+    left: 70px;
     position: relative;
     top: 100px;
 }
 
 .page-call p{
-	color: #FFFFFF;
+    color: #FFFFFF;
     font-size: 2.5em;
     line-height: 2;
     width: 550px;	
 }
 
 .page-call p.txt-important{
-	font-size: 2.2em;
-	font-weight: bold;
-	position: relative;
+    font-size: 2.2em;
+    font-weight: bold;
+    position: relative;
 }
 /*End Header*/
 
 /*Footer*/
 #footer {
-	color: #FFFFFF;
+    color: #FFFFFF;
     margin: 0 auto;
     padding: 5px 30px 30px;
     position: relative;
@@ -205,11 +205,11 @@ img {
 }
 
 #footer-content{
-	padding: 47px 34px 0 37px;
+    padding: 47px 34px 0 37px;
 }	
 
 #footer-title{
-	background: url("../images/application/footer_title_bg2.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/application/footer_title_bg2.png") no-repeat scroll 0 0 transparent;
     color: #FFFFFF;
     font-family: "Times New Roman",Times,serif;
     font-size: 1.5em;
@@ -223,49 +223,49 @@ img {
 }
 
 #footer ul{
-	float: right;	
-	margin: 10px 0 10px;
+    float: right;	
+    margin: 10px 0 10px;
 }
 
 #footer p{
-	font-size: 0.9em;
+    font-size: 0.9em;
     left: -85px;
     position: relative;
     top: 15px;
 }
 
 #footer li{
-	float: left;	
-	margin: 0 6px 0 0;
+    float: left;	
+    margin: 0 6px 0 0;
 }
 
 #nav-footer span{
-	margin: 0 0 0 5px;	
+    margin: 0 0 0 5px;	
 }
 
 #links{
-	position: relative;
+    position: relative;
     top: -55px;	
 }
 
 #links a{
-	color: #FFF;
-	float: left;
+    color: #FFF;
+    float: left;
 }
 
 #links a:hover{
-	color: #20b7c9;	
+    color: #20b7c9;	
 }
 
 #help-footer{
-	font-size: 0.9em;
-	margin: 0;	
-	position: relative;
+    font-size: 0.9em;
+    margin: 0;	
+    position: relative;
     right: 115px;
 }
 
 #help-footer span{
-	margin: 0 0 0 5px;	
+    margin: 0 0 0 5px;	
 }
 /*End Footer*/
 
@@ -281,117 +281,92 @@ img {
 }
 
 .see-more, .edit{
-	background: url("../images/application/read_more.png") no-repeat scroll left center transparent;
-	font-size: 12px;
+    background: url("../images/application/read_more.png") no-repeat scroll left center transparent;
+    font-size: 12px;
 }
 
 .main a.edit{
-	background: url("../images/application/edit.png") no-repeat scroll left center transparent;
-	padding: 0 0 0 15px;
+    background: url("../images/application/edit.png") no-repeat scroll left center transparent;
+    padding: 0 0 0 15px;
 }
 
 .see-more:hover, .edit:hover{
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
-	/*Cols*/
-	.col-1, .col-2{
-		float: left;	
-	}
+/*Cols*/
+.col-1, .col-2{
+    float: left;	
+}
 
-	.col-1{
-		margin: 0 60px 0 0;
-		padding-bottom: 33px;
-		width: 545px;
-	}
+.col-1{
+    margin: 0 60px 0 0;
+    padding-bottom: 33px;
+    width: 545px;
+}
+
+.col-1 h2{
+    border-bottom: 1px dashed #333;
+    font-size: 1.9em;
+    font-weight: normal;
+    font-family: 'Varela', sans-serif;
+    letter-spacing: -2px;
+    line-height: 1.2em;
+    margin-bottom: 12px;	
+}
+
+.col-1 .item{
+    margin: 60px 0 0;	
+}
+
+.col-2{
+    padding: 94px 20px 0;
+    width: 275px;	
+}
+
+.col-2 h2{
+    border-bottom: 1px dashed #333;
+    font-family: 'Varela', sans-serif;
+    font-size: 1.3em;
+    margin: 0 0 20px;
+    padding: 0 0 10px;	
+}
+/*End Cols*/
+
 	
-	.col-1 h2{
-		border-bottom: 1px dashed #333;
-		font-size: 1.9em;
-		font-weight: normal;
-		font-family: 'Varela', sans-serif;
-		letter-spacing: -2px;
-		line-height: 1.2em;
-		margin-bottom: 12px;	
-	}
-	
-	.col-1 .item{
-		margin: 60px 0 0;	
-	}
-	
-	.col-2{
-		padding: 94px 20px 0;
-    	width: 275px;	
-	}
-	
-	.col-2 h2{
-		border-bottom: 1px dashed #333;
-		font-family: 'Varela', sans-serif;
-		font-size: 1.3em;
-		margin: 0 0 20px;
-		padding: 0 0 10px;	
-	}
-	/*End Cols*/
-	
-	.new{
-		border-bottom: 1px dashed #666666;
-		margin-bottom: 20px;
-		padding-bottom: 20px;	
-	}
-	
-	.news_image img{
-		border-radius: 10px;
-		float: left;		
-		margin: 3px 10px 0 0;	
-	}
-	
-	.new h3{
-		float: left;
-		font-size: 1em;
-		margin: 0 20px 0 0;
-	}
-	
-	.new h4{
-		font-size: 0.8em;
-	}
-	
-	.new p{
-		margin: -10px 0 0;	
-		min-height: 40px;
-	}
 
 /*End Main*/
 
 /*Content*/
-   .content-page h1{
-		border-bottom: 1px dashed #999;
-		color: #000000;
-		font-size: 2.6em;
-		font-weight: normal;
-		font-family: 'Varela', sans-serif;
-		letter-spacing: -2px;
-		line-height: 1.2em;
-		margin: 10px 0;	
-        padding: 12px 0; 
-	}
-    
-    .content-col-1, .content-col-2{
-		float: left;	
-	}
+.content-page h1{
+    border-bottom: 1px dashed #999;
+    color: #000000;
+    font-size: 2.6em;
+    font-weight: normal;
+    font-family: 'Varela', sans-serif;
+    letter-spacing: -2px;
+    line-height: 1.2em;
+    margin: 10px 0;	
+    padding: 12px 0; 
+}
 
-	/*Content-col-1*/
-	.content-page .content-col-1{
-		margin: 0 60px 0 0;
-		width: 500px;
-	}
-    /*End Content-col-1*/
-    
-    /*Content-col-2*/
-    .content-col-2{
-    	width: 350px;	
-	}
-    /*End Content-col-2*/
-    
+.content-col-1, .content-col-2{
+    float: left;	
+}
+
+/*Content-col-1*/
+.content-page .content-col-1{
+    margin: 0 60px 0 0;
+    width: 500px;
+}
+/*End Content-col-1*/
+
+/*Content-col-2*/
+.content-col-2{
+    width: 350px;	
+}
+/*End Content-col-2*/
+
 /*End Content*/
 
 
@@ -399,61 +374,75 @@ img {
 
 /*Home*/
 .see-too ul{
-	margin: 0;
+    margin: 0;
 }
 
 .see-too li{
-	float: left;
-	margin: 0 25px 0 0;
-	width: 165px;	
+    float: left;
+    margin: 0 25px 0 0;
+    width: 165px;	
 }
 
 .see-too li.last{
-	margin:0;
+    margin:0;
 }
 
 .see-too img{
-	margin: -10px 0 10px 32px;
+    margin: -10px 0 10px 32px;
 }	
 
 .see-too h3{
-	line-height: 20px;
+    line-height: 20px;
     min-height: 40px;
     text-align: center;	
 }
 
+
+
+
+
+	
+
+
+
 .new{
-	border-bottom: 1px dashed #999;
-	margin-bottom: 20px;
-	padding-bottom: 30px;	
+    border-bottom: 1px dashed #999;
+    margin-bottom: 20px;
+    padding-bottom: 30px;	
 }
 
 .news_image img{
-	border-radius: 10px;
-	float: left;		
-	margin: 3px 10px 0 0;	
+    border-radius: 10px;
+    float: left;		
+    margin: 3px 10px 0 0;	
 }
 
 .new h2{
-	float: left;
-	font-size: 1em;
-	margin: 0 20px 0 0;
+    float: left;
+    font-size: 1em;
+    margin: 0 20px 0 0;
+}
+
+.new h3{
+    float: left;
+    font-size: 1em;
+    margin: 0;
 }
 
 /*.new h4{
-	font-size: 0.7em;
+    font-size: 0.7em;
     left: 5px;
     position: relative;
     top: -16px;
 }*/
 
 .new p{
-	margin: -10px 0 0;	
-	min-height: 50px;
+    margin: 1px 0 0;	
+    min-height: 50px;
 }   
 
 #calendar{
-	margin: 40px 0 0;	
+    margin: 40px 0 0;	
 }
 /*End Home*/
 
@@ -462,7 +451,7 @@ img {
 }
 
 #page-new li{
-	background: none repeat scroll 0 0 #FAF9F9;
+    background: none repeat scroll 0 0 #FAF9F9;
     border: 1px solid #CECECE;
     border-radius: 10px 10px 10px 10px;
     margin: 0 0 30px;
@@ -470,11 +459,11 @@ img {
 }
 
 .call h3{
-	float: left;
+    float: left;
 }
 
 .call h4{
-	float: right;
+    float: right;
     font-size: 0.9em;
     position: relative;
     top: -2px;
