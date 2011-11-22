@@ -1,19 +1,13 @@
-<div class="main">  <!--Main-->
-	<div class="back-right"> <!--Back-right-->
-		<div class="wrapper"> <!--Wrapper-->
-		
-			<div class="col-1">
-			
-				<%= render :partial => "/shared/content_page" %>
-				
-			</div>
-			
-			<div class="col-2">
-			
-			</div>
-			
-		</div><!--Wrapper-->
-	</div> <!--Back-right-->
-	</div>  <!--End Main-->
+<% content_for :body_content_title do %>
+  <%= @update.title %>
+<% end %>
 
+<% content_for :body_content_left do %>
+  <%= raw @update.text %>
+<% end %>
 
+<% content_for :body_content_right do %>
+  <%= render :partial => "/shared/updates" %>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

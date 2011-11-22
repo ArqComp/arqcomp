@@ -23,30 +23,7 @@
       <div class="col-2">
         <div>
           <div class="item">
-            <h2>Latest <span>News</span></h2>
-
-            <% if @noticias.empty? %>
-              <h3>Nenhuma notícia encontrada</h3>
-            <% else %>
-              <% @noticias.each do |noticia| %>
-                <li>
-                  <div class="news_image">
-                    <span></span>
-                    <% if noticia.image.nil? %>
-                      <img alt="image" src="images/home/new1.png">
-                    <% else %>
-                      <img alt="image" src="<%=noticia.image.url%>">
-                    <% end %>
-                  </div>
-                  <div class="new">
-                    <h3><%= truncate(noticia.title, :length => 20) %></h3>
-    <%#*<h4><%= noticia.created_at.strftime("%d/%m/%Y às %H:%M") </h4>%>
-                    <p><%= truncate(sanitize(noticia.text, :tags => ""), :length => 55) %></p>
-                    <%= link_to "Leia mais", update_path(noticia), :class=>"button", :title=>"" %>
-                  </div>
-                </li>
-              <% end %>
-            <% end %>
+            <%= render :partial => "/shared/updates" %>
           </div>
 
           <div class="item">
