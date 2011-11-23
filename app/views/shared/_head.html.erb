@@ -14,14 +14,12 @@
                                                             request.env['HTTP_USER_AGENT'] !~ /MSIE/ and (theme ||= nil).blank?) %>
   <%= stylesheet_link_tag "home", :theme => theme if home_page? %>
   <%= stylesheet_link_tag "style" %>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'> 
   
   <%= yield :stylesheets %>
   <%= render :partial => '/shared/google_analytics' unless local_request? %>
   
   <%= stylesheet_link_tag "event_calendar" %>
-  <%= stylesheet_link_tag "jquery-ui-1.8.16.custom" %>
-
   
   <%= javascript_include_tag 'modernizr-min' %>
   <%= javascript_include_tag 'jquery-min' %>
