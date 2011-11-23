@@ -14,7 +14,7 @@
                                                             request.env['HTTP_USER_AGENT'] !~ /MSIE/ and (theme ||= nil).blank?) %>
   <%= stylesheet_link_tag "home", :theme => theme if home_page? %>
   <%= stylesheet_link_tag "style" %>
-  <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'> -->
   
   <%= yield :stylesheets %>
   <%= render :partial => '/shared/google_analytics' unless local_request? %>
