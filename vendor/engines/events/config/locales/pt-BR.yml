@@ -1,4 +1,13 @@
 pt-BR:
+  activerecord:
+    models:
+      event: Evento
+    attributes:
+      event:
+        name: Nome
+        start_at: Início
+        end_at: Fim
+        all_day: O dia todo
   date:
     formats:
       default: "%e/%m/%Y"

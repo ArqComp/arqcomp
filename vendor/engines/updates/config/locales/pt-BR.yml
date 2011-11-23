@@ -1,4 +1,12 @@
 pt-BR:
+  activerecord:
+    models:
+      update: Projetos
+    attributes:
+      update:
+        title: Título
+        image: Imagem
+        text: Texto
   shared:
     admin:
       image_picker:

@@ -6,4 +6,5 @@ class Update < ActiveRecord::Base
   
   belongs_to :image, :class_name => 'Image'
   
+  
 end

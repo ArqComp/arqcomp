@@ -1,9 +1,9 @@
 pt-BR:
   activerecord:
     models:
-      study_categories: Categorias de Conteúdo
+      study_category: Categoria
     attributes:
-      study_categories:
+      study_category:
         name: Nome
         image: Imagem
   shared:

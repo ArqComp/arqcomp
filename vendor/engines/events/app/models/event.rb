@@ -8,5 +8,7 @@ class Event < ActiveRecord::Base
 	end
 
   validates :name, :presence => true, :uniqueness => true
+  validates :start_at, :presence => true
+  validates :end_at, :presence => true
   
 end

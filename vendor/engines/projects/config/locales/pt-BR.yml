@@ -1,9 +1,9 @@
 pt-BR:
   activerecord:
     models:
-      projects: Projetos
+      project: Projeto
     attributes:
-      projects:
+      project:
         title: Título
         semester: Período
         description: Descrição

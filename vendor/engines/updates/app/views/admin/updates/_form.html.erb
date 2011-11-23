@@ -24,7 +24,7 @@
       <ul id='page_parts'>
         <% [:text].each_with_index do |part, part_index| %>
           <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
-            <%= link_to part.to_s.titleize, "##{part}" %>
+            <%= link_to t(part.to_s, :scope => 'activerecord.attributes.update'), "##{part}" %>
           </li>
         <% end %>
       </ul>

@@ -1,11 +1,11 @@
 pt-BR:
   activerecord:
     models:
-      studies: Categorias de Conteúdo
+      study: Conteúdo
     attributes:
-      studies:
+      study:
         title: Título
-        study_category: Categoria
+        study_category_id: Categoria
         link: Link
         text: Texto
   shared:
