@@ -67,7 +67,7 @@ settings << setting('use_resource_caching', true, nil, true, 'boolean')
 settings << setting('use_google_ajax_libraries', false, nil, true, 'boolean')
 settings << setting('i18n_translation_default_locale', ':pt-BR', 'refinery', true, 'choice')
 settings << setting('i18n_translation_current_locale', ':pt-BR', 'refinery', true, 'choice')
-settings << setting('i18n_translation_frontend_locales', ':pt-BR', 'refinery', true, 'choice')
+settings << setting('i18n_translation_frontend_locales', ['- :pt-BR'], 'refinery', true, 'list')
 settings << setting('activity_show_limit', '7', nil, true, 'choice')
 settings << setting(
   'page_title', 
