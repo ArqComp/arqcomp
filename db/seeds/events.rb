@@ -6,16 +6,3 @@ if defined?(User)
     end
   end
 end
-
-if defined?(Page)
-  page = Page.create(
-    :title => 'Events',
-    :link_url => '/events',
-    :deletable => false,
-    :position => ((Page.maximum(:position, :conditions => {:parent_id => nil}) || -1)+1),
-    :menu_match => '^/events(\/|\/.+?|)$'
-  )
-  Page.default_parts.each do |default_page_part|
-    page.parts.create(:title => default_page_part, :body => nil)
-  end
-end

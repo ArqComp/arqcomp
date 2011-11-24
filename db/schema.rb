@@ -178,6 +178,7 @@ ActiveRecord::Schema.define(:version => 20111122173914) do
     t.integer  "study_category_id"
   end
 
+  add_index "studies", ["id"], :name => "index_studies_on_id"
   add_index "studies", ["study_category_id"], :name => "index_studies_on_study_category_id"
 
   create_table "study_categories", :force => true do |t|
@@ -198,6 +199,8 @@ ActiveRecord::Schema.define(:version => 20111122173914) do
     t.datetime "updated_at"
     t.integer  "image_id"
   end
+
+  add_index "updates", ["id"], :name => "index_updates_on_id"
 
   create_table "user_plugins", :force => true do |t|
     t.integer "user_id"

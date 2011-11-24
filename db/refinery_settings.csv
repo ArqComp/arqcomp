@@ -1,0 +1,96 @@
+1,"use_marketable_urls","--- 'true'
+","t","2011-10-17 16:31:26.756138","2011-10-17 16:31:26.756138","pages","f",,"text_area"
+2,"i18n_translation_enabled","--- 'true'
+","t","2011-10-17 16:31:26.783173","2011-11-22 20:58:12.218315","refinery","f",,"text_area"
+3,"i18n_translation_default_frontend_locale","--- :pt-BR
+...
+","t","2011-10-17 16:31:26.825350","2011-11-22 05:21:33.334254","refinery","f",,"text_area"
+4,"dragonfly_secret","--- d232d407b4e8fb7480501934dfe14df822e0f0d912cfef09
+...
+","t","2011-10-17 16:39:10.353285","2011-10-17 16:39:10.353285",,"f",,"text_area"
+5,"approximate_ascii","--- 'false'
+","t","2011-10-17 16:39:11.471672","2011-10-17 16:39:11.471672","pages","f",,"text_area"
+6,"strip_non_ascii","--- 'false'
+","t","2011-10-17 16:39:11.559412","2011-10-17 16:39:11.559412","pages","f",,"text_area"
+7,"i18n_translation_locales","---
+:pt-BR: Português
+:en: English
+:fr: Français
+:nl: Nederlands
+:da: Dansk
+:nb: Norsk Bokmål
+:sl: Slovenian
+:es: Español
+:it: Italiano
+:de: Deutsch
+:lv: Latviski
+:ru: Русский
+:sv: Svenska
+:pl: Polski
+:zh-CN: Simplified Chinese
+:zh-TW: Traditional Chinese
+:el: Ελληνικά
+:rs: Srpski
+:cs: Česky
+:sk: Slovenský
+:jp: 日本語
+","t","2011-10-17 16:39:59.834697","2011-11-22 21:36:43.439304","refinery","f",,"text_area"
+8,"site_name","--- Arquiteturas de Computadores
+...
+","t","2011-10-17 16:40:08.162436","2011-10-19 18:05:17.208402",,"f",,"text_area"
+9,"use_resource_caching","--- 'true'
+","t","2011-10-17 16:40:08.287932","2011-10-17 16:40:08.287932",,"f",,"text_area"
+10,"use_google_ajax_libraries","--- 'false'
+","t","2011-10-17 16:40:08.446439","2011-10-17 16:40:08.446439",,"f",,"text_area"
+11,"i18n_translation_default_locale","--- :pt-BR
+...
+","t","2011-10-17 16:40:31.895411","2011-11-21 21:23:24.582798","refinery","f",,"text_area"
+12,"i18n_translation_current_locale","--- :pt-BR
+...
+","t","2011-10-17 16:40:32.056486","2011-11-21 21:50:27.100415","refinery","f",,"text_area"
+13,"i18n_translation_frontend_locales","---
+- :pt-BR
+","t","2011-10-17 16:40:32.178468","2011-11-22 21:39:31.004277","refinery","f",,"text_area"
+14,"activity_show_limit","--- 7
+...
+","t","2011-10-17 16:48:53.205510","2011-10-17 16:48:53.205510",,"f",,"text_area"
+15,"page_title","---
+:chain_page_title: false
+:ancestors:
+  :separator: ! ' | '
+  :class: ancestors
+  :tag: span
+:page_title:
+  :class: !!null 
+  :tag: !!null 
+  :wrap_if_not_chained: false
+","t","2011-10-17 16:49:05.502901","2011-10-19 18:06:52.956334",,"f",,"text_area"
+16,"authenticity_token_on_frontend","--- 'true'
+","t","2011-10-17 16:49:05.940068","2011-10-17 16:49:05.940068",,"f",,"text_area"
+17,"frontend_refinery_stylesheets_enabled","--- 'true'
+","t","2011-10-17 16:49:06.147589","2011-10-17 16:49:06.147589",,"f",,"text_area"
+18,"menu_hide_children","--- 'false'
+","t","2011-10-17 16:49:06.339179","2011-10-17 16:49:06.339179",,"f",,"text_area"
+19,"cache_pages_backend","--- 'false'
+","t","2011-10-17 17:31:54.097363","2011-10-17 17:31:54.097363",,"f",,"text_area"
+20,"default_page_parts","---
+- Body
+- Page Call
+- Side Body
+","t","2011-10-17 18:06:50.390368","2011-11-22 05:12:44.876655",,"f",,"text_area"
+21,"image_views","---
+- :grid
+- :list
+","t","2011-10-19 18:04:33.057984","2011-10-19 18:04:33.057984",,"f",,"text_area"
+22,"preferred_image_view","--- :grid
+...
+","t","2011-10-19 18:04:33.403751","2011-10-19 18:04:33.403751",,"f",,"text_area"
+23,"superuser_can_assign_roles","--- 'false'
+","t","2011-10-19 18:05:23.681115","2011-10-19 18:05:23.681115",,"f",,"text_area"
+24,"new_page_parts","--- 'true'
+","t","2011-10-19 18:13:11.378678","2011-11-20 16:17:08.204620",,"f",,"text_area"
+25,"user_image_sizes","---
+:small: 110x110>
+:medium: 225x255>
+:large: 450x450>
+","f","2011-10-19 18:45:34.654004","2011-10-19 18:45:34.654004",,"f",,"text_area"
