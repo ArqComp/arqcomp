@@ -14,12 +14,15 @@
 
           <%= render :partial => "/shared/header" %>
 
-          <div class="page-call">
+          <div id="page-call-default" style="display: none;">
             <% if @page.content_for :page_call %>
               <%= raw @page.content_for :page_call %>
             <% else %>
               <p><%= @page.title %></p>
             <% end %>
+          </div>
+          
+          <div class="page-call">
           </div>
         </div>  <!--End Header-->
 

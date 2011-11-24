@@ -6,19 +6,22 @@ end
 # dom_id DEPRECATED: REMOVE AT 1.1, serves no purpose same with css attributes 'first' and 'last'
 dom_id = "#{menu_branch_counter+1}".html_safe if menu_branch.parent_id.nil?
 -%>
-<li <%= "id=""item-#{dom_id}""" if item_id %>>
+<li <%= "id=""item-#{dom_id}"" class=""page-call-item""" if item_id %>>
+  <div id="page-call-item-<%=dom_id%>" style="display: none">
+      <%= raw PagePart.find_by_page_id_and_title(menu_branch.id, 'Page Call').body%>  
+  </div>
   <%= link_to menu_branch.title, menu_branch.url, :class=>css -%>
   <% if not item_id and not classes.include? "last-child" %>
     <span>-</span>
   <% end %>
-  <%# if (children = menu_branch.children unless hide_children).present? -%>
-    <%#*<ul class='clearfix'>%>
-      <%#= render :partial => '/shared/menu_branch', :collection => children,
-        :locals => {
-        :apply_css => local_assigns[:apply_css],
-        :hide_children => !!hide_children,
-        :item_id => item_id
-      } -%>
-    <%#*</ul>%>
-  <%# end -%>
+<%# if (children = menu_branch.children unless hide_children).present? -%>
+<%#*<ul class='clearfix'>%>
+<%#= render :partial => '/shared/menu_branch', :collection => children,
+:locals => {
+:apply_css => local_assigns[:apply_css],
+:hide_children => !!hide_children,
+:item_id => item_id
+} -%>
+<%#*</ul>%>
+<%# end -%>
 </li>
