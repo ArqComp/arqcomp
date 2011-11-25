@@ -92,7 +92,7 @@
                               <div class="ec-bullet" style="background-color: <%=event.color%>;"></div>
                               <style type="text/css"><%=".ec-#{class_name}-#{event.id}"%> a { color: <%=event.color%>; }</style>
                             <% end %>
-                              <%= link_to "", day_path(:day => day.day, :month=> day.month, :year=> day.year) %>
+                              <%= link_to "", day_path(:dia => day.day, :mes=> day.month, :ano=> day.year) %>
                             <!--<%# if block_given %>
                               <%#= raw block.call({:event => event, :day => day.to_date, :options => options}) %>
                             <%# else %>

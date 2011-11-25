@@ -11,7 +11,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @date = "#{params[:day]}/#{params[:month]}/#{params[:year]}".to_datetime
+    @date = "#{params[:dia]}/#{params[:mes]}/#{params[:ano]}".to_datetime
     
     @day_events = Event.find(:all, :conditions => ["start_at < ? AND end_at >= ?", @date + 1.day, @date])
 
