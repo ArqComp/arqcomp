@@ -77,7 +77,7 @@
                           list << "ec-#{class_name}" if class_name != "event"
                           list << (no_bg ? "ec-event-no-bg" : "ec-event-bg")
                           classes = %(class="#{list.join(' ')}")
-                          list = [(no_bg ? "color: #{event.color};" : "background-color: #{event.color};")]
+                          list = [(no_bg ? "color: #{event.color};" : '')]
                           list << "padding-top: #{options[:event_padding_top]}px;"
                           list << "height: #{options[:event_height] - options[:event_padding_top]}px;"
                           estilos = %(style="#{list.join(' ')}")

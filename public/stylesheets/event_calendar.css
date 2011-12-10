@@ -28,19 +28,16 @@
 
 /* Month name header & links */
 .ec-calendar-header {
-  padding: 5px 0;
-  width: 100%;
-  table-layout: fixed;
+	padding: 5px 0;
+    position: relative;
+    width: 240px;
 }
 
 .ec-month-name {
   font-size: 1.3em;
   font-weight: bold;
+  min-width: 75px;
   padding: 0 5px 0 0;
-}
-
-.ec-month-nav {
-	width: 75px;
 }
 
 /* Containers */
@@ -252,5 +249,41 @@ a.ec-day-link {
 }
 
 .ec-event-bg{
-	background:	 #2670C3;
+	background: url(../images/home/event.png) no-repeat;
+}
+
+.data-event-class{
+	background-color: blue;	
+}
+
+.ec-month-nav{
+	font-size: 0.9em;
+
+}
+
+#month-right, #month-left{
+	position: relative;
+
+} 
+
+#month-right{
+}
+
+#month-left a, #month-right a{
+	padding: 0;
+}
+
+#month-left a{
+	float: right;
+	margin-left: 5px;
+
+}
+
+#month-right a{
+    float: left;
+	margin-right: 2px;
+}
+
+#month-left span, #month-right span{
+
 }
