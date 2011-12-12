@@ -12,6 +12,7 @@
           <h4><%= study.title %></h4>
           <p class="clear"><%= truncate(sanitize(study.text, :tags=>""), :length => 190) %> </p>
           <%= link_to "Download", study.link.url if study.link %>
+          <%= link_to "Leia mais", study_path(study), :title => "", :class=>"see-more" %>
 		  
         <% end %>
       </div>
