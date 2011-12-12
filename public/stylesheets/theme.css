@@ -4,7 +4,7 @@
 */
 
 .wym_skin_refinery .wym_section li.wym_tools_youtube a {
-    width: 20px;
+  width: 20px;
   height: 20px;
   overflow: hidden;
   padding: 2px;
@@ -12,6 +12,19 @@
   background-repeat: no-repeat;
   background-position: 4px 4px;
   padding-left: 2px;
-    padding-right: 2px;
+  padding-right: 2px;
   background-image: url('/images/application/youtube.ico');
+}
+
+.wym_skin_refinery .wym_section li.wym_tools_slideshare a {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  padding: 2px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-image: url('/images/application/slideshare.ico');
 }

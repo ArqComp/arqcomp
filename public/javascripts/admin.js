@@ -90,6 +90,27 @@ var dialog = $(
                \n\
             </div>//'
         ).appendTo('body');
+        
+var dialogSlide = $(
+          '<div style="display:none;">\n\
+               <div id="content-message" style="padding: 10px;">\n\
+                <h1>Digite o código do slide do slideshare que fica depois do ultimo -</h1>\n\
+                <form>\n\
+                   <label for="slideUrl">Código:</label>\n\
+                   <input id="slideUrl" value=""/>\n\
+                   <label for="slideWidth">Largura:</label>\n\
+                   <input id="slideWidth" value="425"/>\n\
+                    <label for="slideHeight">Altura:</label>\n\
+                   <input id="slideHeight" value="355"/>\n\
+                   <br>\n\
+                 </form>\n\
+                <div id="invalidMessage">\n\
+                    Código inválido\n\
+                </div>\n\
+                </div>\n\
+               \n\
+            </div>//'
+        ).appendTo('body');        
 //var dialog = $('#youtube-form');
 //$("body").append(dialog);
      
@@ -106,6 +127,7 @@ var custom_wymeditor_boot_options = {
         {'name': 'Bold', 'title': 'Bold', 'css': 'wym_tools_strong'}
         ,{'name': 'Italic', 'title': 'Emphasis', 'css': 'wym_tools_emphasis'}
         ,{'name': 'Youtube', 'title': 'Youtube', 'css': 'wym_tools_youtube'}
+        ,{'name': 'SlideShare', 'title': 'SlideShare', 'css': 'wym_tools_slideshare'}
         ,{'name': 'InsertUnorderedList', 'title': 'Unordered_List', 'css': 'wym_tools_unordered_list'}
         ,{'name': 'InsertOrderedList', 'title': 'Ordered_List', 'css': 'wym_tools_ordered_list'}
         /*,{'name': 'Indent', 'title': 'Indent', 'css': 'wym_tools_indent'}
@@ -154,6 +176,29 @@ var custom_wymeditor_boot_options = {
                             } else {
                                 wym.insert('<iframe width="'+$('#videoWidth').val()+'" height="'+$('#videoHeight').val()+'" src="http://www.youtube.com/embed/'+$('#videoUrl').val()+'" frameborder="0" allowfullscreen></iframe>'); 
 //                                $("#invalidMessage").show();
+                                $(this).dialog("close");
+                            }   
+
+                        }, 
+                        "Cancel": function() { 
+                            $(this).dialog("close");
+                        }
+                    } 
+                });
+                return false;
+            });
+        $('div.wym_box_'+wym._index+' li.wym_tools_slideshare a').click(function(){
+                $("#invalidMessage").hide();
+                dialogSlide.dialog({ 
+                    title: "Escolha o Slide"
+                    ,buttons: { 
+                        "Ok": function() { 
+                            var matches = $('#slideUrl').val().match(/^http:\/\/(?:www\.)?slideshare.net\/.*-(.*)$/);
+                            if (matches) {
+                                wym.insert('<div style="width:'+$('#slideWidth').val()+'px" id="__ss_'+matches[1]+'"><iframe src="http://www.slideshare.net/slideshow/embed_code/'+matches[1]+'" frameborder="0" height="'+$('#slideHeight').val()+'" width="'+$('#slideWidth').val()+'"></iframe> </div>');
+                                $(this).dialog("close");
+                            } else {
+                                wym.insert('<div style="width:'+$('#slideWidth').val()+'px" id="__ss_'+$('#slideUrl').val()+'"><iframe src="http://www.slideshare.net/slideshow/embed_code/'+$('#slideUrl').val()+'" frameborder="0" height="'+$('#slideHeight').val()+'" width="'+$('#slideWidth').val()+'"></iframe> </div>');
                                 $(this).dialog("close");
                             }   
 
