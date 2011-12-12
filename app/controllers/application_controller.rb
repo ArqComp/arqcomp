@@ -19,4 +19,31 @@ class ApplicationController < ActionController::Base
 
     @event_strips = Event.event_strips_for_month(@shown_month)
   end
+  
+  def slide
+    width = params[:width] 
+    width ||= 500
+    height = params[:height] 
+    height ||= width * 0.76953125
+    url="http://www.slideshare.net/api/oembed/1?url=#{params[:url]}&format=json";
+    images = Curl::Easy.perform(url)
+#    images.on_body { |d| data = ActiveSupport::JSON.decode((d)) }
+#    images.perform
+   data = ActiveSupport::JSON.decode((images.body_str))
+    num = data[:total_slides]
+    suffix = data[:slide_image_baseurl_suffix]
+    slides = data[:slide_image_baseurl]
+    yay = (num && slides);
+    render :layout => false, :locals => {
+      :url => params[:url],
+      :width => width,
+      :height => height,
+      :images => images,
+      :data => data,
+      :num => num,
+      :suffix => suffix,
+      :slides => slides,
+      :yay => yay,
+    }
+  end
 end
