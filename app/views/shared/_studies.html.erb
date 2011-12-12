@@ -3,9 +3,9 @@
   
     <% @categorias_de_conteudo.each do |categoria| %>
 	
-      <div class="<%= categoria.nome %>">
+      <div class="categoria" id="<%= categoria.name %>">
 	  
-        <h3><%= categoria.nome %></h3>
+        <h3><%= categoria.name %></h3>
 		
         <% categoria.studies.each do |study| %>
 		
@@ -20,31 +20,6 @@
   </div>
   
 <% end %>
-
-
-<% content_for :body_content_left do %>
-<!--  <div class="conteudo">
-  
-    <div class="slides">
-	  <h3>Slides</h3>
-	  <% studies.each do |study| %>
-	    <h4><%= study.title %></h4>
-	    <p class="clear"><%= truncate(sanitize(study.text, :tags=>""), :length => 190) %> </p>
-	    <%= link_to "Download", study.link.url if study.link %>
-	  <% end %>
-	</div>
-	
-	<div class="videos">
-	  <h3>Videos</h3>
-	  <% studies.each do |study| %>
-	    <h4><%= study.title %></h4>
-	    <p class="clear"><%= truncate(sanitize(study.text, :tags=>""), :length => 190) %> </p>
-	  <% end %>
-	</div>
-	
-  </div>-->
-<% end %>
-
 
 <% content_for :body_content_right do %>
 <h2><span>Categorias</span></h2>
