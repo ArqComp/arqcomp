@@ -10,7 +10,7 @@
 
         <p class="clear"><%= truncate(sanitize(update.text, :tags=>""), :length => 190) %> </p>
 
-        <%= link_to "Leia mais", update_path(update), :title => "", :class=>"see-more" %>
+		<%= link_to "Leia mais", update_path(update), :class=>"see-more", :title=>"" %>
         <%= link_to "Editar", edit_admin_update_path(update), :title=>"", :class => "edit" if user_signed_in? %>
       </li>
     <% end %>

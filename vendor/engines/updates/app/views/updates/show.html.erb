@@ -3,7 +3,9 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <%= raw @update.text %>
+	<%= raw @update.text %>
+	<%= link_to_function "Voltar", 'back();', :class=>"go-back", :title=>"" %>
+	<%= link_to "Editar", edit_admin_update_path(@update), :title=>"", :class => "edit" if user_signed_in? %>
 <% end %>
 
 <% content_for :body_content_right do %>

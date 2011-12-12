@@ -2,23 +2,26 @@
 <% if @noticias.empty? %>
   <h3>Nenhuma notícia encontrada</h3>
 <% else %>
+  <ul>
   <% @noticias.each do |noticia| %>
     <li>
       <div class="news_image">
         <span></span>
         <% if noticia.image.nil? %>
-          <img alt="image" src="/images/home/new1.png">
+          <img alt="image" src="/images/news/new1.png">
         <% else %>
           <img alt="image" src="<%=noticia.image.url%>">
         <% end %>
       </div>
       <div class="new">
         <h3><%= truncate(noticia.title, :length => 19) %></h3>
-    <%#*<h4><%= noticia.created_at.strftime("%d/%m/%Y às %H:%M") </h4>%>
         <br/>
         <p><%= truncate(sanitize(noticia.text, :tags => ""), :length => 55) %></p>
-        <%= link_to "Leia mais", update_path(noticia), :class=>"button", :title=>"" %>
+        <%= link_to "Leia mais", update_path(noticia), :class=>"button see-more", :title=>"" %>
       </div>
     </li>
   <% end %>
+  <%= link_to "Mais antigas", updates_path(), :class=>"button see-more see-more-news", :title=>"" %>
+  <div class="clear"></div>
+  </ul>
 <% end %>

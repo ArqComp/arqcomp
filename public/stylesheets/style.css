@@ -51,6 +51,10 @@ img {
     clear: both;	
 }
 
+.bold{
+	font-weight: bold;
+}
+
 /*Application*/
 #page-top{
     background: url("../images/application/page-top.gif") repeat-x scroll left top #FFFFFF;
@@ -95,7 +99,7 @@ img {
 #computer{
     position: absolute;
     right: 35px;
-    top: 95px;
+    top: 97px;
 }
 
 #logo{
@@ -176,7 +180,10 @@ img {
 #nav #item-6 a.current {background:url(../images/application/m6-act.png)}
 
 .page-call{
+    color: #FFFFFF;
+    font-size: 1.6em;
     left: 70px;
+    line-height: 30px;
     position: relative;
     top: 100px;
 }
@@ -270,14 +277,19 @@ img {
 /*End Footer*/
 
 /*Main*/
-.main a, .see-more, .edit{
+.main a, .see-more, .edit, .go-back{
     clear: both;
     color: #2670C3;
     display: block;
     float: right;
     font-weight: normal;
     padding: 0 0 2px 12px;
+	text-align: center;
     text-decoration: none;	
+}
+
+.main a:hover{
+	text-decoration: underline;	
 }
 
 .see-more, .edit{
@@ -285,13 +297,55 @@ img {
     font-size: 12px;
 }
 
-.main a.edit{
+.edit{
     background: url("../images/application/edit.png") no-repeat scroll left center transparent;
-    padding: 0 0 0 15px;
+	padding: 0 0 0 15px;
+	position: relative;
+	top: 15px;
 }
 
-.see-more:hover, .edit:hover{
-    text-decoration: underline;
+#page-new .edit{
+	top: 5px;
+}
+
+.project .edit{
+	top: 2px;	
+}
+
+.go-back{
+	background: url("../images/application/go-back.png") no-repeat scroll left center transparent;
+	font-size: 13px;
+}
+
+.edit-all{
+	border-top: 5px solid #2670C3;
+    display: block;
+    height: 80px;
+    margin: 10px 0 0;
+    position: relative;
+    top: 60px;
+    width: 920px;
+}
+
+.edit-all .edit{
+	background-position: 10px center;
+    background-color: #2670C3;
+    color: #FFF;
+    float: left;
+    padding: 5px 15px 5px 25px;
+    text-align: left;
+	top: 0;
+} 
+
+.edit-all .edit:hover{
+	background-color: #5999E1;
+	text-decoration: none;
+}
+
+.see-more-news{
+	background: none;
+	font-size: 1em;
+	margin: 0 0 20px;
 }
 
 /*Cols*/
@@ -315,8 +369,8 @@ img {
     margin-bottom: 12px;	
 }
 
-.col-unique h3{
-/*    border-bottom: 1px dashed #333;*/
+.col-unique h3, .col-1 h3{	
+	color: #2670C3;
     font-size: 1.5em;
     font-weight: normal;
     font-family: 'Varela', sans-serif;
@@ -325,12 +379,9 @@ img {
     margin-bottom: 12px;	
 }
 
-
-
 .col-unique .item{
     margin: 60px 0 0;	
 }
-
 
 .col-1{
     margin: 0 60px 0 0;
@@ -349,7 +400,7 @@ img {
 }
 
 .col-1 .item{
-    margin: 60px 0 0;	
+    margin: 0 0 60px 0;	
 }
 
 .col-2{
@@ -364,9 +415,11 @@ img {
     margin: 0 0 20px;
     padding: 0 0 10px;	
 }
-/*End Cols*/
 
-	
+.col-2-loggedin{
+	padding: 20px 20px 0;	
+}
+/*End Cols*/
 
 /*End Main*/
 
@@ -402,9 +455,6 @@ img {
 
 /*End Content*/
 
-
-
-
 /*Home*/
 .see-too ul{
     margin: 0;
@@ -412,8 +462,8 @@ img {
 
 .see-too li{
     float: left;
-    margin: 0 25px 0 0;
-    width: 165px;	
+    margin: 0 75px 0 0;
+    width: 130px;
 }
 
 .see-too li.last{
@@ -421,22 +471,13 @@ img {
 }
 
 .see-too img{
-    margin: -10px 0 10px 32px;
+    margin: -10px 0 10px 22px;
 }	
 
 .see-too h3{
     line-height: 20px;
-    min-height: 40px;
     text-align: center;	
 }
-
-
-
-
-
-	
-
-
 
 .new{
     border-bottom: 1px dashed #999;
@@ -462,13 +503,6 @@ img {
     margin: 0;
 }
 
-/*.new h4{
-    font-size: 0.7em;
-    left: 5px;
-    position: relative;
-    top: -16px;
-}*/
-
 .new p{
     margin: 1px 0 0;	
     min-height: 50px;
@@ -477,9 +511,6 @@ img {
 /*End Home*/
 
 /*News*/
-#page-new{
-}
-
 #page-new li{
     background: none repeat scroll 0 0 #FAF9F9;
     border: 1px solid #CECECE;
@@ -500,11 +531,76 @@ img {
 }
 /*End News*/
 
+/*Projects*/
+.project h4{
+	font-size: 1.2em;
+}
 
-#projects a{ 
-    float: none;
+.project img{
+	float: left;
+	margin: 0 10px 0 0;
+	background-image:url(../images/bg.jpg);
 }
 
 .project-content {
     padding: 3px 30px;
 }
+
+/*End Projects*/
+
+/*About*/
+.about p{
+	margin: 20px 0;
+	text-indent: 20px;	
+}
+
+.teacher{
+	clear:both;
+	margin: 20px 0 40px 0;
+	width: 605px;	
+}
+
+.teacher h4, .teacher h5{
+	margin: 0 0 10px;
+    padding: 0;
+}
+
+.teacher h5{
+	font-size: 0.9em;
+    margin: 10px 0 5px;
+}
+
+.teacher img{
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.chapters ul{
+	float: left;
+	padding: 0 20px 20px;
+	width: 200px;
+}
+
+.chapters li{
+	list-style: none;
+	font-weight: bold;
+}
+
+.chapters li ul{
+	padding: 10px 20px 20px;
+}
+
+.chapters li ul li{
+	list-style: disc;
+	font-weight: normal;
+}
+
+.chapters li ul li ul li{
+	list-style: square;
+}
+
+.chapters a{
+	float: left;	
+	line-height: 25px;
+}
+/*End About*/

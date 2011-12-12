@@ -23,9 +23,16 @@ side_body = nil if side_body.empty?
           <h2><%= title %></h2>
           <%= raw body %>  
         </div>
-        <div class="col-2">
-          <%= raw side_body %>  
-        </div>
+		
+		<% if user_signed_in? %>
+          <div class="col-2 col-2-loggedin">
+            <%= raw side_body %>  
+          </div>
+		<% else %>
+		  <div class="col-2">
+            <%= raw side_body %>  
+          </div>
+		<% end %>
 
       <% end %>
     </div> <!--End Wrapper-->
