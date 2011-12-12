@@ -1,13 +1,13 @@
 <% content_for :body_content_left do %>
   <div class="conteudo">
   
-    <% @categorias_de_conteudo.each do |categoria| %>
-	
-      <div class="categoria" id="<%= categoria.name %>">
+    <% studies.group_by(&:study_category).each do |categoria, estudos| %>
+
+      <div class="categoria">
 	  
         <h3><%= categoria.name %></h3>
 		
-        <% categoria.studies.each do |study| %>
+        <% estudos.each do |study| %>
 		
           <h4><%= study.title %></h4>
           <p class="clear"><%= truncate(sanitize(study.text, :tags=>""), :length => 190) %> </p>
@@ -15,7 +15,7 @@
 		  
         <% end %>
       </div>
-	  
+
     <% end %>
   </div>
   
