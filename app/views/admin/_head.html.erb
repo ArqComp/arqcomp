@@ -4,6 +4,8 @@
   <%= yield :meta %>
   <title><%= RefinerySetting.find_or_set(:site_name, 'Company Name') -%> - Refinery</title>
   <%= csrf_meta_tag %>
+  
+  <link rel="shortcut icon" href="/fav-icon.ico" />
 
   <%= stylesheet_link_tag 'refinery/site_bar',
                           'refinery/refinery',

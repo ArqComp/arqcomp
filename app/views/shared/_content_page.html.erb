@@ -20,6 +20,7 @@ side_body = nil if side_body.empty?
         </div>
       <% else %>
         <div class="col-1">
+		<%= yield :pre_body_content_title %>
           <h2><%= title %></h2>
           <%= raw body %>  
         </div>

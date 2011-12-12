@@ -7,12 +7,12 @@
           <% projects.each do |project| %>
             <li>
 				<div class="project">
-					<!--<a class="project-title" id="<%= "project-title-#{project.id}" %>"><%= project.title %></a>-->
-					<%= link_to "Editar", edit_admin_project_path(project), :title=>"", :class => "edit" if user_signed_in? %>
-					<h4><%= project.title %></h4>
-					<!--<img alt="" src="/images/trabalho/trabalho1.png">-->
-					<div class="project-description"><%=raw project.description %></div>
-					<!--<div id="<%= "project-#{project.id}-content" %>" class="project-content"></div>-->
+					<a class="project" id="<%= "project-#{project.id}" %>"><%= project.title %></a>
+					<div id="<%= "project-#{project.id}-content" %>" class="project-content">
+					  <%= link_to "Editar", edit_admin_project_path(project), :title=>"", :class => "edit" if user_signed_in? %>
+					  <h4><%= project.title %></h4>
+					  <div class="project-description"><%=raw project.description %></div>
+					</div>
               </div>
             </li>
           <% end %>
