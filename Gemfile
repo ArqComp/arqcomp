@@ -68,3 +68,5 @@ gem 'will_paginate'
 gem 'refinerycms-events', '1.0', :path => 'vendor/engines'
 
 gem 'refinerycms-study_categories', '1.0', :path => 'vendor/engines'
+
+gem 'curb'

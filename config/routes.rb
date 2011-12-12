@@ -1,5 +1,6 @@
 Arqcomp::Application.routes.draw do
   ::Refinery::I18n.current_frontend_locale = 'pt-BR'
+  get 'slide' => 'application#slide', :as => "slide"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
