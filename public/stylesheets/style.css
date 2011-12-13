@@ -272,7 +272,7 @@ img {
 /*End Footer*/
 
 /*Main*/
-.main a, .see-more, .edit, .go-back{
+.main a, .see-more, .edit, .go-back, .download{
     clear: both;
     color: #2670C3;
     display: block;
@@ -315,6 +315,12 @@ img {
 .go-back{
 	background: url("../images/application/go-back.png") no-repeat scroll left center transparent;
 	font-size: 13px;
+}
+
+.download{
+	background: url("../images/application/download.png") no-repeat scroll left center transparent;
+	font-size: 0.9em;
+    margin: 10px 0;
 }
 
 .edit-all{
@@ -617,6 +623,16 @@ img {
 
 /*End Estudos*/
 
+/*Slides*/
+.slides-show p{
+	margin: 10px 0;
+}
+
+.slide-img{
+	margin: 20px auto;
+}
+/*End Slides*/
+
 /*End Conteúdo*/
 
 /*Projects*/
@@ -661,6 +677,15 @@ a.project:hover{
 
 .project-content {
     padding: 3px 30px;
+}
+
+.apresentacao{
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.project-description p{
+	margin: 0 0 20px 20px;
 }
 
 /*End Projects*/
