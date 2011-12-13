@@ -684,3 +684,18 @@ a.project:hover{
 	margin: 0 0 0 10px;	
 }
 /*End Pagination*/
+
+/*Monitoria*/
+.chat, .forum, .monitor{
+	margin: 30px 0;	
+}
+
+.chat h3, .forum h3, .monitor h3{
+	margin: 0 0 10px 0;	
+}
+
+.chat a, .forum a{
+	float: left;
+	margin: 10px 0 0;	
+}
+/*Fim Monitoria*/

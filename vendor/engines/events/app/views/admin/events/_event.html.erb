@@ -4,7 +4,7 @@
     <span class="preview">&nbsp;</span>
   </span>
   <span class='actions'>
-    <%= link_to refinery_icon_tag("application_go.png"), day_path(:day => event.start_at.day, :month => event.start_at.month, :year => event.start_at.year),
+    <%= link_to refinery_icon_tag("application_go.png"), day_path(:dia => event.start_at.day, :mes => event.start_at.month, :ano => event.start_at.year),
         :title => t('.view_live_html'),
         :target => "_blank" %>
     <%= link_to refinery_icon_tag("application_edit.png"), edit_admin_event_path(event),
