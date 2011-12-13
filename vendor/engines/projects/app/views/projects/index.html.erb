@@ -2,17 +2,18 @@
   <ul id="projects">
     <% @projects.group_by(&:semester).sort.reverse.each do |semester, projects| %>
       <li>
+	    <div class="clear"></div>
         <h3><%= semester %></h3>
         <ul>
           <% projects.each do |project| %>
             <li>
 				<div class="project">
-					<a class="project" id="<%= "project-#{project.id}" %>"><%= project.title %></a>
-					<div id="<%= "project-#{project.id}-content" %>" class="project-content">
+					<!--<a class="project" id="<%= "project-#{project.id}" %>"><%= project.title %></a>-->
+					<!--<div id="<%= "project-#{project.id}-content" %>" class="project-content">-->
 					  <%= link_to "Editar", edit_admin_project_path(project), :title=>"", :class => "edit" if user_signed_in? %>
 					  <h4><%= project.title %></h4>
 					  <div class="project-description"><%=raw project.description %></div>
-					</div>
+					<!--</div>-->
               </div>
             </li>
           <% end %>
@@ -22,6 +23,7 @@
     <% end %>
     <%= raw "<div>" %>
   </ul>
+  <%= will_paginate @projects %>
   <% if @project %>
     <div class="unfold" style="display: none;" id="<%=  @project.id %>"/>
   <% end %>

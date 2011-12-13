@@ -1,3 +1,7 @@
+<% content_for :pre_body_content_title do %>
+  <%= link_to "Editar", edit_admin_study_path(@study), :title=>"", :class => "edit edit-new" if user_signed_in? %>
+<% end %>
+
 <% content_for :body_content_title do %>
   <%= @study.title %>
 <% end %>
@@ -6,6 +10,7 @@
   <span><%= link_to 'Download', @study.link.url if @study.link %></span> 
   <div>
     <%=raw @study.text %>
+	<%= link_to_function "Voltar", 'history.go(-1);', :class=>"go-back", :title=>"" %>
   </div>
 <% end %>
 

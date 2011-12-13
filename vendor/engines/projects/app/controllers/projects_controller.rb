@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
 protected
 
   def find_all_projects
-    @projects = Project.order('position ASC')
+    @projects = Project.order('position ASC').paginate :page => params[:page], :per_page => 6
   end
 
   def find_page

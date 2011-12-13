@@ -20,7 +20,11 @@ class StudiesController < ApplicationController
 protected
 
   def find_all_studies
-    @studies = Study.order('position ASC')
+  	@studies = {}
+  	StudyCategory.all.each do |categoria|
+		@studies[categoria] = categoria.studies.order('position ASC').paginate :page => params[categoria.name.parameterize], :per_page => 3
+	end
+    
   end
 
   def find_page

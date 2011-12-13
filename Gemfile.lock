@@ -47,7 +47,6 @@ GEM
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (2.1.2)
     columnize (0.3.4)
-    curb (0.7.16)
     devise (1.4.9)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -182,7 +181,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  curb
   event-calendar
   refinerycms (~> 1.0.8)
   refinerycms-events (= 1.0)!

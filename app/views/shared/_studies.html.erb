@@ -1,36 +1,29 @@
 <% content_for :body_content_left do %>
   <div class="conteudo">
-  
     <% studies.group_by(&:study_category).each do |categoria, estudos| %>
-
       <div class="categoria">
-	  
         <h3><%= categoria.name %></h3>
-		
-        <% estudos.each do |study| %>
-		
-          <h4><%= study.title %></h4>
-          <p class="clear"><%= truncate(sanitize(study.text, :tags=>""), :length => 190) %> </p>
-          <%= link_to "Download", study.link.url if study.link %>
-          <%= link_to "Leia mais", study_path(study), :title => "", :class=>"see-more" %>
-		  
-        <% end %>
+          <% estudos.each do |study| %>
+			<div class="item">
+              <h4><%= study.title %></h4>
+              <p class="clear"><%= truncate(sanitize(study.text, :tags=>""), :length => 190) %> </p>
+              <%= link_to "Download", study.link.url if study.link %>
+              <%= link_to "Leia mais", study_path(study), :title => "", :class=>"see-more" %>
+			  </div>
+		  <% end %>
       </div>
-
     <% end %>
   </div>
-  
 <% end %>
 
 <% content_for :body_content_right do %>
 <h2><span>Categorias</span></h2>
-<ul class="see-too">
+<ul class="see-too categorias">
 <% @categorias_de_conteudo.each do |categoria| %>
     <%= link_to study_category_path(categoria), :title=>"" do %>
     <li>
+	    <%= image_fu(categoria.image, nil) %>
         <h3> <%=  truncate(categoria.name, :length => 19)  %>  </h3>
-        <%= image_fu(categoria.image, nil) %>
-        
     </li>
     <% end %>
   <% end %>

@@ -27,7 +27,7 @@ gem 'sqlite3'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 # group :development, :test do
-#   gem 'webrat'
+#   gem 'webrat'.
 # end
 
 # REFINERY CMS ================================================================
@@ -68,5 +68,3 @@ gem 'will_paginate'
 gem 'refinerycms-events', '1.0', :path => 'vendor/engines'
 
 gem 'refinerycms-study_categories', '1.0', :path => 'vendor/engines'
-
-gem 'curb'

@@ -27,7 +27,9 @@ end
 puts '-Home'
 home = criar_pagina(
   [
-    ["Page Call", "<p>Page Call Home</p><br/>", 0],
+    ["Page Call", "
+	<h2>Bem Vindo</h2>
+	<h3>Ao site de Arquitetura de Computadores</h3>", 0],
     ["Body", "", 1],
     ["Side Body", "", 2],
   ], {
@@ -61,7 +63,9 @@ criar_pagina(
   <p>Os conceitos fundamentais serão o apresentados ao longo do curso, não se detendo em detalhes de certos computadores.</p>", 0],
     ["Body", "", 1],
     ["Side Body", "", 2],
-    ["Page Call", "", 3],
+    ["Page Call", "
+	<h2>Veja toda informação</h2>
+	<h3>Disciplina, professores e site</h3>", 3],
   ], {
     :title => 'A Disciplina',
     :link_url => '/disciplina',
