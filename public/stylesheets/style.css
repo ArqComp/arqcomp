@@ -695,6 +695,7 @@ a.project:hover{
 }
 
 .chat a, .forum a{
+	cursor: pointer;
 	float: left;
 	margin: 10px 0 0;	
 }
